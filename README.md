@@ -1,24 +1,27 @@
-# README
+# Personal recipe tracker built using Ruby on Rails
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Getting started
 
-Things you may want to cover:
+To work with this app locally, clone the repo and then install gems:
 
-* Ruby version
+```
+$ bundle install --without production
+```
 
-* System dependencies
+Migrate the database:
 
-* Configuration
+```
+$ rails db:migrate
+```
 
-* Database creation
+Run the test suite:
 
-* Database initialization
+```
+$ rails test
+```
 
-* How to run the test suite
+If the test suite passes, you'll be ready to run the app in a local server:
 
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+```
+$ rails server
+```
