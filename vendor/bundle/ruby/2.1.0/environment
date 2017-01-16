@@ -1,0 +1,3 @@
+export PATH="/Users/grantgarland/.rvm/gems/ruby-2.2.3/bin:/Users/grantgarland/.rvm/gems/ruby-2.2.3@global/bin:/Users/grantgarland/.rvm/rubies/ruby-2.2.3/bin:/Users/grantgarland/.rvm/bin:$PATH"
+export GEM_PATH="/Users/grantgarland/.rvm/gems/ruby-2.2.3:/Users/grantgarland/.rvm/gems/ruby-2.2.3@global:/Users/grantgarland/Projects/Self/my_cookbook/vendor/bundle/ruby/2.1.0"
+export GEM_HOME="/Users/grantgarland/Projects/Self/my_cookbook/vendor/bundle/ruby/2.1.0"

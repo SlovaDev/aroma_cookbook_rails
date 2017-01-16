@@ -1,0 +1,16 @@
+current directory: /Users/grantgarland/Projects/Self/my_cookbook/vendor/bundle/ruby/2.1.0/gems/debug_inspector-0.0.2/ext/debug_inspector
+/Users/grantgarland/.rvm/rubies/ruby-2.2.3/bin/ruby -r ./siteconf20170116-16710-1mhmk4j.rb extconf.rb
+creating Makefile
+
+current directory: /Users/grantgarland/Projects/Self/my_cookbook/vendor/bundle/ruby/2.1.0/gems/debug_inspector-0.0.2/ext/debug_inspector
+make "DESTDIR=" clean
+
+current directory: /Users/grantgarland/Projects/Self/my_cookbook/vendor/bundle/ruby/2.1.0/gems/debug_inspector-0.0.2/ext/debug_inspector
+make "DESTDIR="
+compiling debug_inspector.c
+linking shared-object debug_inspector.bundle
+ld: warning: directory not found for option '-L/Users/haven/.sm/pkg/active/lib'
+
+current directory: /Users/grantgarland/Projects/Self/my_cookbook/vendor/bundle/ruby/2.1.0/gems/debug_inspector-0.0.2/ext/debug_inspector
+make "DESTDIR=" install
+/usr/bin/install -m 0755 debug_inspector.bundle ./.gem.20170116-16710-aem1se
