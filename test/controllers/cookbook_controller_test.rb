@@ -1,8 +1,8 @@
 require 'test_helper'
 
-class CookbookControllerTest < ActionDispatch::IntegrationTest
+class CookbookControllerTest < ActionController::TestCase
   test "should get show page" do
-    get cookbook_index_url
+    get :index
     assert_response :success
     assert_select "title", "My Cookbook"
   end

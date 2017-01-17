@@ -1,8 +1,8 @@
 require 'test_helper'
 
-class SearchRecipeControllerTest < ActionDispatch::IntegrationTest
+class SearchRecipeControllerTest < ActionController::TestCase
   test "should get show page" do
-    get search_recipe_index_url
+    get :index
     assert_response :success
     assert_select "title", "Search Recipe"
   end
