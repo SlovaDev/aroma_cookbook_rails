@@ -4,7 +4,8 @@ Rails.application.routes.draw do
   get '/contact', to: 'welcome#contact'
   get '/about', to: 'welcome#about'
 
-  resources :cookbook, only: [:index]
-  resources :add_recipe, only: [:index]
+  resources :cuisines, only: [:index, :show] do
+    resources :recipes, only: [:index]
+  end
   resources :search_recipe, only: [:index]
 end

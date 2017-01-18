@@ -1,0 +1,15 @@
+<h1>My Cookbook</h1>
+
+<div class="row">
+  <div class="col-md-8">
+    <% @cuisines.each do |cuisine| %>
+        <div class="media">
+          <div class="media-body">
+            <h4 class="media-heading">
+              <%= link_to cuisine.name, cuisine %>
+            </h4>
+          </div>
+        </div>
+    <% end %>
+  </div>
+</div>
