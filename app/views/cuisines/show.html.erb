@@ -1,16 +1,19 @@
+<% provide(:title, @cuisine.name.pluralize) %>
 <h1><%= @cuisine.name.pluralize %></h1>
 
 <div class="row">
   <div class="col-md-8">
-    <% @cuisine.recipes.each do |post| %>
+    <% @cuisine.recipes.each do |recipe| %>
         <div class="media">
           <div class="media-body">
             <h4 class="media-heading">
-              <%= recipe.title %>
-              <!-- <%= link_to recipe.title, cuisine_recipe_path(@cuisine, recipe) %> -->
+              <%= link_to recipe.name, cuisine_recipe_path(@cuisine, recipe) %>
+              <%= link_to "Edit", edit_cuisine_recipe_path(@cuisine, recipe) %>
             </h4>
           </div>
         </div>
       <% end %>
   </div>
 </div>
+
+<%= link_to "New Recipe", new_cuisine_recipe_path(@cuisine), class: 'btn btn-success' %>

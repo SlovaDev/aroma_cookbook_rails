@@ -5,7 +5,14 @@ class CuisinesControllerTest < ActionDispatch::IntegrationTest
     @cuisine = cuisines(:one)
   end
 
-  test "should exist" do
-    assert_equal 1, Cuisine.count
+  test "should get index" do
+    get cuisines_url
+    assert_response :success
+  end
+
+  test "should get show" do
+    get cuisine_url(@cuisine)
+    assert_response :success
+    assert_select "title", "Appetizers"
   end
 end

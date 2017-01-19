@@ -5,7 +5,6 @@ Rails.application.routes.draw do
   get '/about', to: 'welcome#about'
 
   resources :cuisines, only: [:index, :show] do
-    resources :recipes, only: [:index]
+    resources :recipes, only: [:show, :new, :create, :edit, :update]
   end
-  resources :search_recipe, only: [:index]
 end
