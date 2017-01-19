@@ -1,6 +1,6 @@
 class RecipesController < ApplicationController
-  before_action :set_recipe, only: [:show, :edit, :update]
-  before_action :set_cuisine, only: [:new, :create]
+  before_action :set_recipe, only: [:show, :edit, :update, :destroy]
+  before_action :set_cuisine, only: [:new, :create, :destroy]
 
   def show
   end
@@ -27,6 +27,14 @@ class RecipesController < ApplicationController
       redirect_to cuisine_recipe_url(@recipe.cuisine_id, @recipe)
     else
       render 'edit'
+    end
+  end
+
+  def destroy
+    if @recipe.destroy
+      redirect_to cuisine_url(@cuisine)
+    else
+      flash[:alert] = "There was a problem deleting the recipe. Please try again."
     end
   end
 

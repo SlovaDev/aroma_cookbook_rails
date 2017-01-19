@@ -31,4 +31,9 @@ class RecipesControllerTest < ActionController::TestCase
     put :update, params: { cuisine_id: @cuisine.id, id: @recipe.id, recipe: { name: "New recipe" } }
     assert_redirected_to cuisine_recipe_path(@cuisine, @recipe)
   end
+
+  test "should delete recipe" do
+    delete :destroy, params: { cuisine_id: @cuisine.id, id: @recipe.id }
+    assert_redirected_to cuisine_path(@cuisine)
+  end
 end
