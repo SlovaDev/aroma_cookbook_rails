@@ -1,4 +1,5 @@
 class RecipesController < ApplicationController
+  before_action :verify_user
   before_action :set_recipe, only: [:show, :edit, :update, :destroy]
   before_action :set_cuisine, only: [:new, :create, :destroy]
 

@@ -1,4 +1,6 @@
 class CuisinesController < ApplicationController
+  before_action :verify_user
+
   def index
     @cuisines = Cuisine.all
   end
