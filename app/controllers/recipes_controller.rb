@@ -8,11 +8,15 @@ class RecipesController < ApplicationController
 
   def new
     @recipe = Recipe.new
+    @recipe.ingredients.build
+    @recipe.directions.build
   end
 
   def create
-    @recipe = @cuisine.recipes.build(recipe_params)
-
+    @recipe = Recipe.new(recipe_params)
+    @recipe.cuisine = @cuisine
+    @recipe.user = current_user
+    
     if @recipe.save
       redirect_to cuisine_recipe_url(@recipe.cuisine_id, @recipe)
     else
@@ -49,6 +53,6 @@ class RecipesController < ApplicationController
   end
 
   def recipe_params
-    params.require(:recipe).permit(:name)
+    params.require(:recipe).permit(:name, :user_id, :cuisine_id, ingredients_attributes: [:id, :item, :quantity, :measure, :_destroy], directions_attributes: [:id, :direction, :_destroy])
   end
 end
