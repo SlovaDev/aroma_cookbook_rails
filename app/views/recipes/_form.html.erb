@@ -1,24 +1,39 @@
-<%= simple_form_for [cuisine, recipe], html: { multipart: true } do |f| %>
-  <div class="field"
-    <%= f.input :name, placeholder: 'Recipe name' %>
+<%= form_for recipe, html: { multipart: true } do |f| %>
+  <div class="form-group">
+    <%= f.label :name %>
+    <%= f.text_field :name, placeholder: 'Recipe name', class: "form-control" %>
   </div>
-  <div class="col-md-6">
-      <h3>Ingredients</h3>
-        <%= f.simple_fields_for :ingredients do |ingredient| %>
-          <%= render 'ingredient_fields', f: ingredient %>
+  <div class="form-group">
+    <%= f.label :cuisine_id %><br>
+    <%= f.select(:cuisine_id, options_from_collection_for_select(Cuisine::all, :id, :name),
+    {:prompt => 'Please Choose'}, :class => "form-control") %>
+  </div>
+
+    <div class="col-md-8">
+      <div class="form-group">
+        <h3>Ingredients</h3>
+          <%= f.fields_for :ingredients do |ingredient| %>
+            <%= render 'ingredient_fields', f: ingredient %>
+          <% end %>
+        <div class="links">
+          <%= link_to_add_association 'Add Ingredient', f, :ingredients, class: "form-button btn btn-default" %>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-4">
+      <div class="form-group">
+        <h3>Directions</h3>
+        <%= f.fields_for :directions do |direction| %>
+          <%= render 'direction_fields', f: direction %>
         <% end %>
-      <div class="links">
-        <%= link_to_add_association 'Add Ingredient', f, :ingredients, class: "form-button btn btn-default" %>
+        <div class="links">
+          <%= link_to_add_association 'Add Direction', f, :directions, class: "form-button btn btn-default" %>
+        </div>
       </div>
-  </div>
-  <div class="col-md-6">
-      <h3>Directions</h3>
-      <%= f.simple_fields_for :directions do |direction| %>
-        <%= render 'direction_fields', f: direction %>
-      <% end %>
-      <div class="links">
-        <%= link_to_add_association 'Add Direction', f, :directions, class: "form-button btn btn-default" %>
-      </div>
-  </div>
-  <%= f.button :submit, "Save recipe", class: "form-button btn btn-default" %>
+    </div>
+    <div class="form-inline clearfix col-md-12">
+      <%= f.button :submit, class: "form-button btn btn-success" %>
+      <%= link_to "Back", url_for(:back), class: "form-button btn btn-default" %>
+    </div>
 <% end %>

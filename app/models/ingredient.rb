@@ -4,6 +4,5 @@ class Ingredient < ApplicationRecord
 
   def init
     self.quantity ||= 1
-    self.measure ||= 'unit'
   end
 end

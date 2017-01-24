@@ -7,9 +7,7 @@
         <div class="media">
           <div class="media-body">
             <h4 class="media-heading">
-              <%= link_to recipe.name, cuisine_recipe_path(@cuisine, recipe) %>
-              <%= link_to "Edit", edit_cuisine_recipe_path(@cuisine, recipe) %>
-              <%= link_to "Delete", [recipe.cuisine, recipe], method: :delete, data: { confirm: 'Are you sure you want to delete this post?' } %>
+              <%= link_to recipe.name, recipe_path(recipe) %>
             </h4>
           </div>
         </div>
@@ -17,4 +15,5 @@
   </div>
 </div>
 
-<%= link_to "New Recipe", new_cuisine_recipe_path(@cuisine), class: 'btn btn-success' %>
+<%= link_to "New Recipe", new_recipe_path, class: 'btn btn-success' %>
+<%= link_to 'Back', url_for(:back), class: 'btn btn-alert' %>

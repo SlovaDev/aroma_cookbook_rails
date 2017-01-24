@@ -1,4 +1,5 @@
 <% provide(:title, @recipe.name) %>
+<p id="notice"><%= alert %></p>
 
 <div class="main_content">
   <div class="row">
@@ -21,6 +22,8 @@
         <ul>
           <% @recipe.ingredients.each do |ingredient| %>
             <li>
+              <%= ingredient.quantity %>
+              <%= ingredient.measure %>
               <%= ingredient.item %>
             </li>
           <% end %>
@@ -42,10 +45,10 @@
   </div>
   <div class="row">
     <div class="col-md-12">
-      <%= link_to "Back", root_path, class: "btn btn-default" %>
+      <%= link_to "Back", url_for(:back), class: "btn btn-default" %>
       <% if user_signed_in? %>
-        <%= link_to "Edit", edit_cuisine_recipe_path, class: "btn btn-default" %>
-        <%= link_to "Delete", [@recipe.cuisine, @recipe], method: :delete, data: { confirm: 'Are you sure you want to delete this post?' } %>
+        <%= link_to "Edit", edit_recipe_path, class: "btn btn-default" %>
+        <%= link_to "Delete", recipe_path, method: :delete, data: { confirm: 'Are you sure you want to delete this post?' } %>
       <% end %>
     </div>
   </div>

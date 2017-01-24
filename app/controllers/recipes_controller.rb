@@ -1,26 +1,23 @@
 class RecipesController < ApplicationController
-  before_action :verify_user
+  before_action :authenticate_user!, only: [:new, :edit, :create, :update, :destroy]
   before_action :set_recipe, only: [:show, :edit, :update, :destroy]
-  before_action :set_cuisine, only: [:new, :create, :destroy]
 
   def show
   end
 
   def new
     @recipe = Recipe.new
-    @recipe.ingredients.build
-    @recipe.directions.build
   end
 
   def create
     @recipe = Recipe.new(recipe_params)
-    @recipe.cuisine = @cuisine
     @recipe.user = current_user
-    
+    binding.pry
     if @recipe.save
-      redirect_to cuisine_recipe_url(@recipe.cuisine_id, @recipe)
+      redirect_to @recipe, notice: "Recipe added!"
     else
-      render 'new'
+      flash.now[:alert] = "There was a problem saving the recipe. Please try again."
+      render :new
     end
   end
 
@@ -28,31 +25,30 @@ class RecipesController < ApplicationController
   end
 
   def update
-    if @recipe.update(recipe_params)
-      redirect_to cuisine_recipe_url(@recipe.cuisine_id, @recipe)
+    if @recipe.update_attributes(recipe_params)
+      redirect_to @recipe
     else
-      render 'edit'
+      flash.now[:alert] = "There was a problem saving the recipe. Please try again."
+      render :edit
     end
   end
 
   def destroy
     if @recipe.destroy
-      redirect_to cuisine_url(@cuisine)
+      redirect_to cuisines_path
     else
-      flash[:alert] = "There was a problem deleting the recipe. Please try again."
+      flash.now[:alert] = "There was a problem deleting the recipe. Please try again."
+      render :show
     end
   end
 
   private
+
   def set_recipe
     @recipe = Recipe.find(params[:id])
   end
 
-  def set_cuisine
-    @cuisine = Cuisine.find(params[:cuisine_id])
-  end
-
   def recipe_params
-    params.require(:recipe).permit(:name, :user_id, :cuisine_id, ingredients_attributes: [:id, :item, :quantity, :measure, :_destroy], directions_attributes: [:id, :direction, :_destroy])
+    params.require(:recipe).permit(:name, :cuisine_id, :ingredients_attributes => [:id, :quantity, :measure, :item, :_destroy], :directions_attributes => [:id, :direction, :_destroy])
   end
 end
