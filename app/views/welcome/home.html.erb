@@ -5,5 +5,7 @@
     A place for storing and sharing your culinary creations.
   </h2>
 
-  <%= link_to "Sign up now!", new_user_registration_path, class: "btn btn-lg btn-primary" %>
+  <% if !current_user %>
+    <%= link_to "Sign up now!", new_user_registration_path, class: "btn btn-lg btn-primary" %>
+  <% end %>  
 </div>

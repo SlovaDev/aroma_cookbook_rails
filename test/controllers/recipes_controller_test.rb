@@ -2,20 +2,21 @@ require 'test_helper'
 
 class RecipesControllerTest < ActionController::TestCase
   setup do
+    @user = users(:one)
     @cuisine = cuisines(:one)
     @recipe = recipes(:one)
   end
 
   test "should not show recipe for unauthenticated users" do
-    get :show, params: { cuisine_id: @recipe.cuisine_id, id: @recipe.id }
+    get :show, params: { id: @recipe.id }
     assert_response :redirect
   end
-  # Test broken b/c still unsure which paramaters to show
-  # test "should show recipe for authenticated users" do
-  #   sign_in users(:one)
-  #   get :show, params: { cuisine_id: @recipe.cuisine_id, id: @recipe.id }
-  #   assert_response :success
-  # end
+
+  test "should show recipe for authenticated users" do
+    sign_in @user
+    get :show, params: { id: @recipe.id }
+    assert_response :success
+  end
 
   test "should not get new recipe for unauthenticated users" do
     get :new, params: { cuisine_id: @cuisine.id }
@@ -23,7 +24,7 @@ class RecipesControllerTest < ActionController::TestCase
   end
 
   test "should get new recipe for authenticated users" do
-    sign_in users(:one)
+    sign_in @user
     get :new, params: { cuisine_id: @cuisine.id }
     assert_response :success
   end
@@ -33,13 +34,12 @@ class RecipesControllerTest < ActionController::TestCase
     assert_response :redirect
   end
 
-  # Test broken b/c still unsure which paramaters are required for create
-  # test "should create recipe for authenticated users" do
-  #   sign_in users(:one)
-  #   assert_difference('Recipe.count') do
-  #     post :create, params: { cuisine_id: @cuisine.id, recipe: { name: 'Some recipe'} }
-  #   end
-  # end
+  test "should create recipe for authenticated users" do
+    sign_in @user
+    assert_difference('Recipe.count') do
+      post :create, params: { recipe: { name: 'Some recipe', cuisine_id: @cuisine.id, user_id: @user} }
+    end
+  end
 
   test "should not edit recipe for unauthenticated users" do
     get :edit, params: { cuisine_id: @cuisine.id, id: @recipe.id }
@@ -47,22 +47,21 @@ class RecipesControllerTest < ActionController::TestCase
   end
 
   test "should edit recipe for authenticated users" do
-    sign_in users(:one)
+    sign_in @user
     get :edit, params: { cuisine_id: @cuisine.id, id: @recipe.id }
     assert_response :success
   end
 
   test "should not update recipe for unauthenticated users" do
-    put :update, params: { cuisine_id: @cuisine.id, id: @recipe.id, recipe: { name: "New recipe" } }
+    put :update, params: { id: @recipe.id, recipe: { name: "New recipe", cuisine_id: @cuisine.id } }
     assert_response :redirect
   end
 
-  # Test broken b/c still unsure which paramaters are required for update
-  # test "should update recipe for authenticated users" do
-  #   sign_in users(:one)
-  #   put :update, params: { cuisine_id: @cuisine.id, id: @recipe.id, recipe: { name: "New recipe" } }
-  #   assert_redirected_to cuisine_recipe_path(@cuisine, @recipe)
-  # end
+  test "should update recipe for authenticated users" do
+    sign_in @user
+    patch :update, params: { id: @recipe.id, recipe: { name: "New recipe", cuisine_id: @cuisine.id } }
+    assert_response :success
+  end
 
   test "should not delete recipe for unauthenticated users" do
     delete :destroy, params: { cuisine_id: @cuisine.id, id: @recipe.id }
@@ -70,8 +69,8 @@ class RecipesControllerTest < ActionController::TestCase
   end
 
   test "should delete recipe for authenticated users" do
-    sign_in users(:one)
-    delete :destroy, params: { cuisine_id: @cuisine.id, id: @recipe.id }
-    assert_redirected_to cuisine_path(@cuisine)
+    sign_in @user
+    delete :destroy, params: { id: @recipe.id }
+    assert_redirected_to cuisines_path
   end
 end

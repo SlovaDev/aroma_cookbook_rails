@@ -8,10 +8,12 @@
         <h1>
           <%= @recipe.name %>
         </h1>
-        <p>
-          Submitted by
-          <%= @recipe.user.email %>
-        </p>
+        <% if @recipe.user %>
+          <p>
+            Submitted by
+            <%= @recipe.user.email %>
+          </p>
+        <% end %>
       </div>
     </div>
   </div>
