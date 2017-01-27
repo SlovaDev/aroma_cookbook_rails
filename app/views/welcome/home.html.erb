@@ -1,11 +1,16 @@
-<div class="center jumbotron">
-  <h1>Welcome to My Cookbook</h1>
+<div class="center jumbotron" style="background-color:white">
+  <h1><%= t('welcome.main') %></h1>
 
   <h2>
-    A place for storing and sharing your culinary creations.
+    <%= t('welcome.detail') %>
   </h2>
 
   <% if !current_user %>
-    <%= link_to "Sign up now!", new_user_registration_path, class: "btn btn-lg btn-primary" %>
-  <% end %>  
+    <div class="row" style="padding:10px">
+      <%= link_to t('forms.buttons.log_in'), new_user_registration_path, class: "btn btn-lg btn-primary" %>
+    </div>
+    <div class="row">
+      <%= link_to t('forms.buttons.sign_up'), new_user_registration_path, class: "btn btn-lg btn-primary" %>
+    </div>
+  <% end %>
 </div>

@@ -4,7 +4,7 @@
     <%= f.text_field :name, placeholder: 'Recipe name', class: "form-control" %>
   </div>
   <div class="form-group">
-    <%= f.label :cuisine_id %><br>
+    <%= f.label :cuisine %><br>
     <%= f.select(:cuisine_id, options_from_collection_for_select(Cuisine::all, :id, :name),
     {:prompt => 'Please Choose'}, :class => "form-control") %>
   </div>

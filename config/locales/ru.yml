@@ -1,0 +1,82 @@
+ru:
+  welcome:
+    main: "Добро пожаловать в Мою кулинарную книгу"
+    detail: "Ваше место, где можна сохранять и делиться своими рецептами"
+  detail:
+    info: "Информациа"
+    about: "Обо мне"
+    code: "Код"
+  menu:
+    title: "Моя Кулинарная Книга"
+    new_recipe: "Добавить рецепт"
+    cookbook: "Кулинарная Книга"
+    edit_account: "Редиактиробать Счет"
+    log_in: "Входить"
+    log_out: "Выходить"
+    sign_up: "Регистрироваться"
+  footer:
+    about: "Информация"
+    contact: "Контакт"
+    languages:
+      lang: "Язык"
+      ru: "Русский"
+      en: "Англиский"
+
+  activerecord:
+    models:
+      user: "Пользователь"
+      recipe: "Рецепт"
+      cuisine: "Кухня"
+      ingredient: "Ингредиент"
+      direction: "Директива"
+    attributes:
+      user:
+        email: "Электронная почта"
+        password: "Пароль"
+        password_confirmation: "Подтверждение пароля"
+        current_password: "Настояще пароль"
+      recipe:
+        name: "Название рецепта"
+      cuisine:
+        name: "Закуска"
+        name: "Хлеб"
+        name: "Суп"
+        name: "Основное блюдо"
+        name: "Салат"
+        name: "Десерт"
+        name: "Напиток"
+        name: "Разносторонний"
+      ingredient:
+        item: "Продукт"
+        quantity: "Количество"
+        measure: "Измерение"
+      direction:
+        item: "Директива"
+
+  forms:
+    messages:
+      success: "Операция была успешно выполнена!"
+    buttons:
+      sign_up: "Регистроваться"
+      log_in: "Входить"
+      forgot_pass: "Забыли пароль?"
+      save: "Записывать"
+      send: "Послать"
+      back: "Назад"
+      add_ingredient: "Добавить Ингредиент"
+      add_direction: "Добавить Директива"
+
+  cuisines:
+    index:
+      title: "Моя Кулинарная Книга"
+  recipes:
+    edit:
+      title: "Редактировать Рецепт"
+    new:
+      title: "Добавить Рецепт"
+    ingredients:
+      item: "Ингредиент"
+      quantity: "Кoличество"
+      measure: "Измерение"
+    directions:
+      direction: "Директива"

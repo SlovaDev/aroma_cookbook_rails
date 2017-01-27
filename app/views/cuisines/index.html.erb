@@ -1,14 +1,15 @@
-<% provide(:title, "My Cookbook") %>
-<h1>My Cookbook</h1>
+<% provide(:title, t('cuisines.index.title')) %>
+<h1>
+  <%= t('cuisines.index.title') %>
+</h1>
 
 <div class="row">
-  <div class="col-md-8">
     <% @cuisines.each do |cuisine| %>
-        <div class="media">
-          <div class="media-body">
-            <h4 class="media-heading">
-              <%= link_to cuisine.name, cuisine %>
-            </h4>
+        <div class="col-md-4">
+          <div class="cuisine">
+            <h2>
+              <%= link_to t('activerecord.attributes.cuisine.name'), cuisine %>
+            </h2>
           </div>
         </div>
     <% end %>

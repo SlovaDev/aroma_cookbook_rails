@@ -1,3 +1,6 @@
-<h1>Add Recipe</h1>
+<% provide(:title, t('menu.new_recipe')) %>
+<h1>
+  <%= t('menu.new_recipe') %>
+</h1>
 
   <%= render partial: 'form', locals: { recipe: @recipe } %>

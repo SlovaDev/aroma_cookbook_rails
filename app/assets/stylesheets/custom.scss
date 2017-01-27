@@ -1,6 +1,8 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
+$purple: #9a1daf;
+$light_purple: #da38f7;
 $light-gray: #777;
 $gray-medium-light: #eaeaea;
 
@@ -31,6 +33,7 @@ textarea {
 /* typography */
 
 h1, h2, h3, h4, h5, h6 {
+  font-family: 'Fira Sans Extra Condensed';
   line-height: 1;
 }
 
@@ -51,6 +54,7 @@ h2 {
 }
 
 p {
+  font-family: 'Fira Sans Extra Condensed';
   font-size: 1.1em;
   line-height: 1.7em;
 }
@@ -61,12 +65,12 @@ p {
   float: left;
   margin-right: 10px;
   font-size: 1.7em;
-  color: purple;
+  color: $purple;
   letter-spacing: -1px;
   padding-top: 9px;
   font-weight: bold;
   &:hover {
-    color: magenta;
+    color: $light-purple;
     text-decoration: none;
   }
 }

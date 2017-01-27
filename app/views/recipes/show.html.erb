@@ -10,8 +10,8 @@
         </h1>
         <% if @recipe.user %>
           <p>
-            Submitted by
-            <%= @recipe.user.email %>
+            Created by <%= @recipe.user.email %> on
+            <%= @recipe.created_at.strftime('%-d %B %Y') %>
           </p>
         <% end %>
       </div>

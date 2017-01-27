@@ -1,5 +1,12 @@
-<% provide(:title, 'About') %>
-<h1>About</h1>
+<% provide(:title, t('detail.info')) %>
+<h1><%= t('detail.info') %></h1>
 <p>
-    <a href="http://www.github.com/SlovaDev/my_cookbook">Source code</a>
+    <a href="http://www.github.com/SlovaDev/my_cookbook">
+      <%= t('detail.code') %>
+    </a>
+</p>
+<p>
+    <a href="http://www.linkedin.com/in/grant-garland">
+      <%= t('detail.about') %>
+    </a>
 </p>

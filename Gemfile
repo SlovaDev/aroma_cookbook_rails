@@ -17,6 +17,7 @@ gem 'bootstrap-sass', '3.3.6'
 gem 'devise'
 gem 'simple_form', '~> 3.2', '>= 3.2.1'
 gem "cocoon"
+gem 'rails-i18n'
 
 group :development, :test do
   gem 'byebug', platform: :mri
