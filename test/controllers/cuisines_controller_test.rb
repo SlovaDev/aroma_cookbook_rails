@@ -25,7 +25,6 @@ class CuisinesControllerTest < ActionController::TestCase
     sign_in users(:one)
     get :show, params: { id: @cuisine }
     assert_response :success
-    assert_select "title", "Appetizers"
   end
 
 end

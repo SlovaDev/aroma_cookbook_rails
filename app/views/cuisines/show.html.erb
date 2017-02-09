@@ -1,5 +1,5 @@
-<% provide(:title, @cuisine.name.pluralize) %>
-<h1><%= @cuisine.name.pluralize %></h1>
+<% provide(:title, t(@cuisine.name)) %>
+<h1><%= t(@cuisine.name.pluralize) %></h1>
 
 <div class="row">
   <div class="col-md-8">

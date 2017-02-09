@@ -2,10 +2,12 @@ ru:
   welcome:
     main: "Добро пожаловать в Мою кулинарную книгу"
     detail: "Ваше место, где можна сохранять и делиться своими рецептами"
+
   detail:
-    info: "Информациа"
+    info: "Информация"
     about: "Обо мне"
     code: "Код"
+
   menu:
     title: "Моя Кулинарная Книга"
     new_recipe: "Добавить рецепт"
@@ -14,6 +16,7 @@ ru:
     log_in: "Входить"
     log_out: "Выходить"
     sign_up: "Регистрироваться"
+
   footer:
     about: "Информация"
     contact: "Контакт"
@@ -22,21 +25,45 @@ ru:
       ru: "Русский"
       en: "Англиский"
 
-  activerecord:
-    models:
-      user: "Пользователь"
-      recipe: "Рецепт"
-      cuisine: "Кухня"
-      ingredient: "Ингредиент"
+  cuisines:
+    cuisine: ["Закуска", "Хлеб", "Суп", "Основное блюдо", "Салат", "Десерт", "Напиток", "Разносторонний"]
+    index:
+      title: "Кухня"
+
+  recipes:
+    edit:
+      title: "Редактировать Рецепт"
+    new:
+      title: "Добавить Рецепт"
+    ingredients:
+      item: "Ингредиент"
+      quantity: "Кoличество"
+      measure: "Измерение"
+    directions:
       direction: "Директива"
-    attributes:
+
+  forms:
+    messages:
+      success: "Операция была успешно выполнена!"
+    buttons:
+      sign_up: "Регистроваться"
+      log_in: "Входить"
+      forgot_pass: "Забыли пароль?"
+      save: "Записывать"
+      send: "Послать"
+      back: "Назад"
+      add_ingredient: "Добавить Ингредиент"
+      add_direction: "Добавить Директива"
+
+  activerecord:
+    model:
       user:
-        email: "Электронная почта"
+        email: "Электронная Почта"
         password: "Пароль"
-        password_confirmation: "Подтверждение пароля"
-        current_password: "Настояще пароль"
+        password_confirmation: "Pодтверждение Pароля"
+        current_password: "Настоящий Пароль"
       recipe:
-        name: "Название рецепта"
+        name: "Peцепт"
       cuisine:
         name: "Закуска"
         name: "Хлеб"
@@ -52,31 +79,8 @@ ru:
         measure: "Измерение"
       direction:
         item: "Директива"
-
-  forms:
-    messages:
-      success: "Операция была успешно выполнена!"
-    buttons:
-      sign_up: "Регистроваться"
-      log_in: "Входить"
-      forgot_pass: "Забыли пароль?"
-      save: "Записывать"
-      send: "Послать"
-      back: "Назад"
-      add_ingredient: "Добавить Ингредиент"
-      add_direction: "Добавить Директива"
-
-  cuisines:
-    index:
-      title: "Моя Кулинарная Книга"
-  recipes:
-    edit:
-      title: "Редактировать Рецепт"
-    new:
-      title: "Добавить Рецепт"
-    ingredients:
-      item: "Ингредиент"
-      quantity: "Кoличество"
-      measure: "Измерение"
-    directions:
-      direction: "Директива"
+    attributes:
+      user:
+        email: "Электронная Почта"
+        password: "Пароль"
+        password_confirmation: "Подтверждения Пароля"

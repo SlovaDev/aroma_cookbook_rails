@@ -2,6 +2,7 @@ en:
   welcome:
     main: "Welcome to My Cookbook"
     detail: "A place for storing and sharing your culinary creations."
+
   detail:
     info: "Information"
     about: "About the dev"
@@ -15,6 +16,7 @@ en:
     log_in: "Log In"
     log_out: "Log Out"
     sign_up: "Sign Up"
+
   footer:
     about: "About"
     contact: "Contact"
@@ -23,36 +25,22 @@ en:
       ru: "Russian"
       en: "English"
 
-  activerecord:
-    models:
-      user: "User"
-      recipe: "Recipe"
-      cuisine: "Cuisine"
-      ingredient: "Ingredient"
+  cuisines:
+    cuisine: ["Appetizer", "Bread", "Soup", "Entree", "Salad", "Dessert", "Drink", "Miscellaneous"]
+    index:
+      title: "Cuisine"
+
+  recipes:
+    edit:
+      title: "Edit Recipe"
+    new:
+      title: "New Recipe"
+    ingredients:
+      item: "Item"
+      quantity: "Quantity"
+      measure: "Measure"
+    directions:
       direction: "Direction"
-    attributes:
-      user:
-        email: "Email"
-        password: "Password"
-        password_confirmation: "Password Confirmation"
-        current_password: "Current Password"
-      recipe:
-        name: "Name"
-      cuisine:
-        name: "Appetizer"
-        name: "Bread"
-        name: "Soup"
-        name: "Entree"
-        name: "Salad"
-        name: "Dessert"
-        name: "Drink"
-        name: "Miscellaneous"
-      ingredient:
-        item: "Item"
-        quantity: "quantity"
-        measure: "Measure"
-      direction:
-        item: "Item"
 
   forms:
     messages:
@@ -67,17 +55,32 @@ en:
       add_ingredient: "Add Ingredient"
       add_direction: "Add Direction"
 
-  cuisines:
-    index:
-      title: "My Cookbook"
-  recipes:
-    edit:
-      title: "Edit Recipe"
-    new:
-      title: "New Recipe"
-    ingredients:
-      item: "Item"
-      quantity: "Quantity"
-      measure: "Measure"
-    directions:
-      direction: "Direction"
+  activerecord:
+    model:
+      user:
+        email: "Email"
+        password: "Password"
+        password_confirmation: "Password Confirmation"
+        current_password: "Current Password"
+      recipe:
+        name: "Appetizer"
+        name: "Bread"
+        name: "Soup"
+        name: "Entree"
+        name: "Salad"
+        name: "Dessert"
+        name: "Drink"
+        name: "Miscellaneous"
+      cuisine:
+        name: "Name"
+      ingredient:
+        item: "Item"
+        quantity: "Quantity"
+        measure: "Measure"
+      direction:
+        item: "Item"
+    attributes:
+      user:
+        email: "Email"
+        password: "Password"
+        password_confirmation: "Password Confirmation"
