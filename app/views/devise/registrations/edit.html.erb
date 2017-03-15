@@ -15,7 +15,7 @@
 
     <%= f.input :password, autocomplete: "off", hint: t('devise.registrations.pass_hint'), required: false %>
     <%= f.input :password_confirmation, required: false %>
-    <%= f.input :current_password, hint: t('devise.registrations.current_pass_hint'), required: true %>
+    <%= f.input :current_password, autocomplete: "off", hint: t('devise.registrations.current_pass_hint'), required: true %>
   </div>
 
   <div class="form-actions">

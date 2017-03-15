@@ -34,7 +34,12 @@ ru:
     edit:
       title: "Редактировать Рецепт"
     new:
+      name: "Имя рецепта"
       title: "Добавить Рецепт"
+      ingredients: "Ингредиенты"
+      cuisines:
+        title: "Кухня"
+        choose: "Выбрайте, пожалуйста"
     ingredients:
       item: "Ингредиент"
       quantity: "Кoличество"

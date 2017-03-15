@@ -39,7 +39,7 @@ en:
       title: "Sign up"
       edit_account: "Edit Account"
       pass_hint: "leave it blank if you don't want to change it"
-      current_pass_hint: "we need your current password to confirm your changes"
+      current_pass_hint: "We need your current password to confirm your changes"
       cancel_account: "Cancel my account"
       destroyed: "Bye! Your account has been successfully cancelled. We hope to see you again soon."
       signed_up: "Welcome! You have signed up successfully."

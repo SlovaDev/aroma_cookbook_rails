@@ -1,20 +1,8 @@
-<header class="navbar navbar-fixed-top navbar">
+<header class="navbar navbar-fixed-top navbar" style="background-color: 'white';">
   <div class="container" style="font-family: 'bad script';">
     <%= link_to t('menu.title'), root_path, id: "logo" %>
     <nav>
-      <% if user_signed_in? %>
-        <ul class="nav navbar-nav navbar-right">
-          <li><%= link_to t('menu.new_recipe'), new_recipe_path %></li>
-          <li><%= link_to t('menu.cookbook'), cuisines_path %></li>
-          <li><%= link_to t('menu.edit_account'), edit_user_registration_path %></li>
-          <li><%= link_to t('menu.log_out'), destroy_user_session_path, method: :delete %></li>
-        </ul>
-      <% else %>
-        <ul class="nav navbar-nav navbar-right">
-          <li><%= link_to t('menu.log_in'), new_user_session_path %></li>
-          <li><%= link_to t('menu.sign_up'), new_user_registration_path %></li>
-        </ul>
-      <% end %>
+      <%= header_helper %>
     </nav>
   </div>
 </header>

@@ -6,7 +6,7 @@ feature 'User creates a recipe' do
     login_as user
   end
 
-  scenario 'they see the add recipe page' do
+  scenario 'can add a recipe' do
     visit new_recipe_path
 
     fill_in 'Recipe name', with: 'Test Recipe, Yum Yum'

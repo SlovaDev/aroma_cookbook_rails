@@ -6,7 +6,6 @@ class Recipe < ApplicationRecord
 
   validates :name, presence: true, length: { maximum: 50 }
 
-
   accepts_nested_attributes_for :ingredients,
                                   reject_if: :all_blank,
                                   allow_destroy: true

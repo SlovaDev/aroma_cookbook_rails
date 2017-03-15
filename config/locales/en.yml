@@ -34,7 +34,12 @@ en:
     edit:
       title: "Edit Recipe"
     new:
+      name: "Recipe name"
       title: "New Recipe"
+      ingredients: "Ingredients"
+      cuisines:
+        title: "Cuisine"
+        choose: "Please choose"
     ingredients:
       item: "Item"
       quantity: "Quantity"
@@ -63,6 +68,8 @@ en:
         password_confirmation: "Password Confirmation"
         current_password: "Current Password"
       recipe:
+        name: "Recipe"
+      cuisine:
         name: "Appetizer"
         name: "Bread"
         name: "Soup"
@@ -71,8 +78,6 @@ en:
         name: "Dessert"
         name: "Drink"
         name: "Miscellaneous"
-      cuisine:
-        name: "Name"
       ingredient:
         item: "Item"
         quantity: "Quantity"

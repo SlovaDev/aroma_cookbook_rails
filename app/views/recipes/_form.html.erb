@@ -1,17 +1,16 @@
 <%= form_for recipe, html: { multipart: true } do |f| %>
   <div class="form-group">
-    <%= f.label :name %>
-    <%= f.text_field :name, placeholder: 'Recipe name', class: "form-control" %>
+    <%= f.label :name, t('recipes.new.name') %>
+    <%= f.text_field :name, placeholder: t('recipes.new.name'), class: "form-control" %>
   </div>
   <div class="form-group">
-    <%= f.label :cuisine %><br>
-    <%= f.select(:cuisine_id, options_from_collection_for_select(Cuisine::all, :id, :name),
-    {:prompt => 'Please Choose'}, :class => "form-control") %>
+    <%= f.label :cuisine, t('recipes.new.cuisines.title') %><br>
+    <%= f.select :cuisine_id, (options_for_select(Cuisine.for_select)) %>
   </div>
 
     <div class="col-md-8">
       <div class="form-group">
-        <h3>Ingredients</h3>
+        <h3><%= t('recipes.new.ingredients') %></h3>
           <%= f.fields_for :ingredients do |ingredient| %>
             <%= render 'ingredient_fields', f: ingredient %>
           <% end %>

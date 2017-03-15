@@ -9,5 +9,5 @@ RSpec.describe Recipe, type: :model do
     it { should belong_to(:cuisine) }
     it { should have_many(:ingredients) }
     it { should have_many(:directions) }
-    
+
 end
