@@ -1,6 +1,6 @@
 <% provide(:title) %>
 <h1>
-  <%= t('cuisines.index.title') %>
+  <%= t('activerecord.model.cuisine.name') %>
 </h1>
 
 <div class="row">
@@ -12,7 +12,7 @@
                 <%= link_to cuisine do %>
                   <%= image_tag cuisine.image_url %>
                 <% end %>
-                  <%= link_to t('cuisines.cuisine')[index], cuisine %>
+                  <%= link_to t('activerecord.model.cuisine.cuisine')[index], cuisine %>
               </h2>
             </div>
           </div>

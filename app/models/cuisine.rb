@@ -3,10 +3,8 @@ class Cuisine < ApplicationRecord
   has_many :recipes
   before_save :set_image
 
-  def self.for_select
-    Cuisine.all.map do |cuisine|
-      [I18n.t("activerecord.model.cuisine.#{name}"), cuisine]
-    end
+  def translated_cuisine_category
+    I18n.t(cuisine_category, :scope => :cuisine_categories)
   end
 
   private
