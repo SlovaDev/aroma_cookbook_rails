@@ -1,9 +1,9 @@
 
 <div class="form-inline clearfix">
   <div class="nested-fields">
-    <%= f.number_field :quantity, step: 0.25, placeholder: 'qnt', class: "form-control" %>
-    <%= f.text_field :measure, placeholder: 'measure', class: "form-control" %>
-    <%= f.text_field :item, placeholder: 'ingredient', class: "form-control" %>
-    <%= link_to_remove_association "Remove", f, class: "form-button btn btn-default" %>
+    <%= f.number_field :quantity, step: 0.25, placeholder: t('recipes.new.ingredients.quantity'), class: "form-control" %>
+    <%= f.text_field :measure, placeholder: t('recipes.new.ingredients.measure'), class: "form-control" %>
+    <%= f.text_field :item, placeholder: t('recipes.new.ingredients.ingredient'), class: "form-control" %>
+    <%= link_to_remove_association t('recipes.new.buttons.remove'), f, class: "form-button btn btn-default" %>
     </div>
   </div>

@@ -1,6 +1,6 @@
 <div class="form-inline clearfix">
   <div class="nested-fields">
-    <%= f.text_area :direction, placeholder: 'Direction', class: "form-control" %>
-    <%= link_to_remove_association "Remove", f, class: "btn btn-default form-button" %>
+    <%= f.text_area :direction, placeholder: t('recipes.new.directions.placeholder'), class: "form-control" %>
+    <%= link_to_remove_association t('recipes.new.buttons.remove'), f, class: "btn btn-default form-button" %>
   </div>
 </div>

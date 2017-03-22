@@ -26,9 +26,14 @@ en:
       en: "English"
 
   cuisines:
-    cuisine: ["Appetizer", "Bread", "Soup", "Entree", "Salad", "Dessert", "Drink", "Miscellaneous"]
-    index:
-      title: "Cuisine"
+    appetizer: "Appetizer"
+    bread: "Bread"
+    soup: "Soup"
+    entree: "Entree"
+    salad: "Salad"
+    dessert: "Dessert"
+    drink: "Drink"
+    misc: "Miscellaneous"
 
   recipes:
     edit:
@@ -36,10 +41,24 @@ en:
     new:
       name: "Recipe name"
       title: "New Recipe"
-      ingredients: "Ingredients"
+      ingredients: 
+        title: "Ingredients"
+        qnt: "qnt"
+        measure: "measure"
+        ingredient: "ingredient"
+      directions: 
+        title: "Directions"
+        placeholder: "Add direction..."
+        remove: "Remove"
       cuisines:
         title: "Cuisine"
         choose: "Please choose"
+      buttons:
+        add_ingredient: "Add Ingredient"
+        add_direction: "Add Direction"
+        save: "Save"
+        back: "Back"
+        remove: "Remove"
     ingredients:
       item: "Item"
       quantity: "Quantity"
@@ -70,14 +89,8 @@ en:
       recipe:
         name: "Recipe"
       cuisine:
-        name: "Appetizer"
-        name: "Bread"
-        name: "Soup"
-        name: "Entree"
-        name: "Salad"
-        name: "Dessert"
-        name: "Drink"
-        name: "Miscellaneous"
+        name: "Cuisine"
+        cuisine: ["Appetizer", "Bread", "Soup", "Entree", "Salad", "Dessert", "Drink", "Miscellaneous"]
       ingredient:
         item: "Item"
         quantity: "Quantity"
