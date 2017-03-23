@@ -18,6 +18,7 @@ gem 'devise'
 gem 'simple_form', '~> 3.2', '>= 3.2.1'
 gem "cocoon"
 gem 'rails-i18n'
+gem 'browser', '2.0.3'
 
 group :development, :test do
   gem 'byebug', platform: :mri

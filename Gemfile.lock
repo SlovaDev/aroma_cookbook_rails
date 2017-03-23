@@ -48,6 +48,7 @@ GEM
     bootstrap-sass (3.3.6)
       autoprefixer-rails (>= 5.2.1)
       sass (>= 3.3.4)
+    browser (2.0.3)
     builder (3.2.3)
     byebug (9.0.6)
     capybara (2.11.0)
@@ -264,6 +265,7 @@ PLATFORMS
 
 DEPENDENCIES
   bootstrap-sass (= 3.3.6)
+  browser (= 2.0.3)
   byebug
   capybara
   cocoon
@@ -295,4 +297,4 @@ DEPENDENCIES
   web-console (>= 3.3.0)
 
 BUNDLED WITH
-   1.13.7
+   1.14.6

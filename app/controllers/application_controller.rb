@@ -1,6 +1,7 @@
 class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
   before_action :set_locale
+  before_action :detect_device_variant
 
   def verify_user
     unless user_signed_in?
@@ -28,5 +29,11 @@ class ApplicationController < ActionController::Base
     end
   end
     I18n.locale = l
+  end
+
+  def detect_device_variant
+    request.variant = :phone if browser.device.mobile?
+    request.variant = :tablet if browser.device.tablet?
+    request.variant = :desktop if !browser.device.mobile? && !browser.device.tablet?
   end
 end
