@@ -6,12 +6,13 @@
     <title><%= full_title(yield(:title)) %></title>
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <link href="https://fonts.googleapis.com/css?family=Bad+Script|Fira+Sans+Extra+Condensed:400,600&amp;subset=cyrillic" rel="stylesheet">
+    <script src="https://npmcdn.com/tether@1.2.4/dist/js/tether.min.js"></script>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
     <%= csrf_meta_tags %>
   </head>
 
   <body>
-    <%= render 'layouts/header' %>
+    <%= render 'layouts/navigation' %>
 
     <div class="container">
       <%= yield %>
