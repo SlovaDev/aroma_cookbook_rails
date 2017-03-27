@@ -3,14 +3,7 @@
   <title>
     <%= full_title(yield(:title)) %>
   </title>
-  <% # alternative title format. %>
-  <% # %title= content_for?(:title) ? ("XXX - " + yield(:title)) : "XXX" %>
   <meta name="description"/>
-  <% # For better search engine result page descriptions use the following: %>
-  <% # - if content_for?(:description_tag) %>
-  <% #   %meta{name: "description",       content: yield(:description_tag).strip} %>
-  <% # - else %>
-  <% #   %meta{name: "description",       content: "XXX"} %>
   <meta content="True" name="HandheldFriendly"/>
   <meta content="320" name="MobileOptimized"/>
   <meta content="width=device-width, initial-scale=1" name="viewport"/>
@@ -30,25 +23,14 @@
   <% # Tile icon for Win8 %>
   <meta content="/touch/apple-touch-icon-144x144-precomposed.png" name="msapplication-TileImage"/>
   <meta content="#222222" name="msapplication-TileColor"/>
-  <% # SEO: If mobile URL is different from desktop URL, add a canonical link to the desktop page %>
-  <% # %link{rel: "canonical", href: "http://www.example.com/"} %>
   <% # Add to homescreen for Chrome on Android %>
   <% # %meta{name: "mobile-web-app-capable", content: "yes"} %>
   <% # For iOS web apps. Delete if not needed. https://github.com/h5bp/mobile-boilerplate/issues/94 %>
   <% # %meta{name: "apple-mobile-web-app-capable",          content: "yes"} %>
   <% # %meta{name: "apple-mobile-web-app-status-bar-style", content: "black"} %>
   <% # %meta{name: "apple-mobile-web-app-title",            content: ""} %>
-  <% # This script prevents links from opening in Mobile Safari. https://gist.github.com/1042026 %>
-  <% # :javascript %>
-  <% #   (function(a,b,c){if(c in b&&b[c]){var d,e=a.location,f=/^(a|html)$/i;a.addEventListener("click",function(a){d=a.target;while(!f.test(d.nodeName))d=d.parentNode;"href"in d&&(d.href.indexOf("http")||~d.href.indexOf(e.host))&&(a.preventDefault(),e.href=d.href)},!1)}})(document,window.navigator,"standalone") %>
-  <% # stylesheet_link_tag "phone" %>
-  <% # Google Web Fonts combination idea. Delete if you do not use. %>
   <link href="https://fonts.googleapis.com/css?family=Bad+Script|Fira+Sans+Extra+Condensed:400,600&amp;subset=cyrillic" rel="stylesheet">
-  <% # Typekit script. Delete if you do not use. %>
-  <% # %script{src: '//use.typekit.net/XXX.js', type: 'text/javascript'} %>
-  <% # :javascript %>
-  <% #   try{Typekit.load();}catch(e){} %>
-  <% # for production customize modernizr at: http://www.modernizr.com/download/ %>
+  <script src="https://npmcdn.com/tether@1.2.4/dist/js/tether.min.js"></script>
   <%= javascript_include_tag 'modernizr-2.8.3.min' %>
   <%= csrf_meta_tag %>
 </head>

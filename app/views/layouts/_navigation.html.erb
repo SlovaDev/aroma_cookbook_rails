@@ -1,11 +1,20 @@
-<header class="navbar navbar-fixed-top navbar" style="background-color: 'white';">
-  <div class="container" style="font-family: 'bad script';">
-    <%= link_to t('menu.title'), root_path, id: "logo" %>
-    <nav>
-      <%= header_helper %>
+<div class="masthead clearfix">
+  <div class="inner">
+    <h3 class="masthead-brand"><%= link_to t('menu.title'), root_path, id: "logo" %></h3>
+    <nav class="nav nav-masthead app-nav">
+        <%= header_helper %>
     </nav>
   </div>
-</header>
+</div>
+<!-- 
+<header class="navbar navbar-fixed-top navbar" style="background-color: 'white';">
+  <div class="container" style="font-family: 'bad script';">
+    
+    <nav>
+      
+    </nav>
+  </div>
+</header> -->
 
 <div class="flash">
     <% if flash[:notice] %>
