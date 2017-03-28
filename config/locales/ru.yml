@@ -9,7 +9,7 @@ ru:
     code: "Код"
 
   menu:
-    title: "Моя Кулинарная Книга"
+    title: "Кухня"
     new_recipe: "Добавить рецепт"
     cookbook: "Кулинарная Книга"
     edit_account: "Редиактиробать Счет"
