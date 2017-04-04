@@ -1,9 +1,9 @@
 <head>
   <meta charset="utf-8"/>
-  <title>
-    <%= full_title(yield(:title)) %>
-  </title>
-  <meta name="description"/>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title><%= full_title(yield(:title)) %></title>
+  <meta name="description" content="Family Recipe Sharing">
+    <meta name="author" content="Grant Garland">
   <meta content="True" name="HandheldFriendly"/>
   <meta content="320" name="MobileOptimized"/>
   <meta content="width=device-width, initial-scale=1" name="viewport"/>
@@ -29,7 +29,7 @@
   <% # %meta{name: "apple-mobile-web-app-capable",          content: "yes"} %>
   <% # %meta{name: "apple-mobile-web-app-status-bar-style", content: "black"} %>
   <% # %meta{name: "apple-mobile-web-app-title",            content: ""} %>
-  <link href="https://fonts.googleapis.com/css?family=Bad+Script|Fira+Sans+Extra+Condensed:400,600&amp;subset=cyrillic" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Bad+Script|Fira+Sans+Extra+Condensed:400,600&amp;subset=cyrillic" rel="stylesheet" type="text/css">
   <script src="https://npmcdn.com/tether@1.2.4/dist/js/tether.min.js"></script>
   <%= javascript_include_tag 'modernizr-2.8.3.min' %>
   <%= csrf_meta_tag %>
