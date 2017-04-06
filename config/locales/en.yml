@@ -70,7 +70,7 @@ en:
     messages:
       success: "Operation succeeded!"
     buttons:
-      sign_up: "Try it out Today"
+      sign_up: "Try Aroma Today!"
       log_in: "Log In"
       forgot_pass: "Forgotten Password?"
       save: "Save"
