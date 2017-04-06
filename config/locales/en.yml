@@ -1,7 +1,7 @@
 en:
   welcome:
     main: "Welcome to My Cookbook"
-    detail: "A place for storing and sharing your culinary creations."
+    detail: "Bring your family together again with Aroma, the place to store and share your culinary creations. "
 
   detail:
     info: "Information"
@@ -9,9 +9,9 @@ en:
     code: "Source code"
 
   menu:
-    title: "Cuisine"
+    title: "Aroma"
     new_recipe: "Add Recipe"
-    cookbook: "Cookbook"
+    cookbook: "My Cookbook"
     edit_account: "Edit Account"
     log_in: "Log In"
     log_out: "Log Out"
@@ -41,12 +41,12 @@ en:
     new:
       name: "Recipe name"
       title: "New Recipe"
-      ingredients: 
+      ingredients:
         title: "Ingredients"
         qnt: "qnt"
         measure: "measure"
         ingredient: "ingredient"
-      directions: 
+      directions:
         title: "Directions"
         placeholder: "Add direction..."
         remove: "Remove"
@@ -70,7 +70,7 @@ en:
     messages:
       success: "Operation succeeded!"
     buttons:
-      sign_up: "Register"
+      sign_up: "Try it out Today"
       log_in: "Log In"
       forgot_pass: "Forgotten Password?"
       save: "Save"

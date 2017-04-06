@@ -1,17 +1,41 @@
+
 <% provide(:title, t('menu.title')) %>
-<div>
-  <h1><%= t('welcome.main') %></h1>
+<header>
+  <div class="container">
+      <div class="row">
+          <div class="col-sm-7">
+              <div class="header-content">
+                  <div class="header-content-inner">
+                      <h1><%= t('welcome.detail') %></h1>
+                      <%= link_to t('forms.buttons.sign_up'), new_user_registration_path, class: 'btn btn-outline btn-xl page-scroll' %>
+                  </div>
+              </div>
+          </div>
+          <div class="col-sm-5">
+              <div class="welcome-container">
+                  <div class="welcome-mockup">
+                      <div class="image">
+                          <div class="cupcake">
+                              <%= image_tag("cupcake-1", class: "img-responsive") %>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+</header>
 
-  <h2>
-    <%= t('welcome.detail') %>
-  </h2>
-
-  <% if !current_user %>
-    <div class="row" style="padding:10px">
-      <%= link_to t('forms.buttons.log_in'), new_user_registration_path, class: "btn btn-lg btn-primary" %>
-    </div>
-    <div class="row">
-      <%= link_to t('forms.buttons.sign_up'), new_user_registration_path, class: "btn btn-lg btn-primary" %>
-    </div>
-  <% end %>
-</div>
+<section id="download" class="download bg-primary text-center">
+  <div class="container">
+      <div class="row">
+          <div class="col-md-8 col-md-offset-2">
+              <h2 class="section-heading">Bring your cooking even closer to home!</h2>
+              <p>Our app is also available on any mobile device! Click below to download Aroma onto your device home screen!</p>
+              <div class="badges">
+                <%= image_tag("homescreen-download", class: "badge-link") %>
+              </div>
+          </div>
+      </div>
+  </div>
+  </section>
