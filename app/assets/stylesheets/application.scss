@@ -148,12 +148,12 @@ body {
           #mainNav.navbar-shrink .navbar-nav > li > a:focus:hover {
             color: #a928c9; } }
 
-header.masthead {
+header{
   position: relative;
   width: 100%;
   min-height: auto;
   overflow-y: hidden;
-  color: white; }
+  color: inherit; }
   header.masthead .header-content {
     text-align: center;
     margin: 30px;
@@ -163,20 +163,20 @@ header.masthead {
       position: relative;
       max-width: 500px;
       margin: 0 auto; }
-      header.masthead .header-content .header-content-inner h1 {
-        margin-top: 0;
+      header .header-content .header-content-inner h1 {
+        margin-top: 100px;
         margin-bottom: 30px;
-        font-size: 30px; }
+        font-size: 50px; }
       header.masthead .header-content .header-content-inner .list-badges {
         margin-bottom: 25px; }
         header.masthead .header-content .header-content-inner .list-badges img {
           height: 50px;
           margin-bottom: 25px; }
-  header.masthead .welcome-container {
+  header .welcome-container {
     max-width: 300px;
     margin: 0 auto 100px; }
-    header.masthead .image-container .cupcake img {
-      border-radius: 3px; }
+    header .welcome-container .welcome-mockup .image .cupcake {
+      margin-top: 13px; }
   @media (min-width: 768px) {
     header.masthead {
       min-height: 100%; }
@@ -249,8 +249,8 @@ section.features .feature-item {
     font-size: 30px; }
   section.features .feature-item i {
     font-size: 80px;
-    background: -webkit-linear-gradient(to left, #7b4397, #dc2430);
-    background: linear-gradient(to left, #7b4397, #dc2430);
+    background: -webkit-linear-gradient(to left, #F28BA3, #a928c9);
+    background: linear-gradient(to left, #F28BA3, #a928c9);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent; }
 
@@ -360,6 +360,5 @@ footer {
   border-radius: 300px; }
 
 .btn-xl {
-  margin: 5em 5em;
-  padding: 15px 75px;
+  padding: 1em 2em;
   font-size: 11px; }
