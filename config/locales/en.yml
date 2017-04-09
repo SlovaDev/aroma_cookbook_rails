@@ -2,8 +2,10 @@ en:
   welcome:
     main: "Welcome to My Cookbook"
     detail: "Bring your family together again with Aroma, the place to store and share your culinary creations. "
-    feature: "Cook. Snap. Share"
-    feature_detail: "It's as easy as that."
+    feature:
+      header: "Cook. Share. Repeat."
+      detail: "See what you can do with Aroma."
+
   detail:
     info: "Information"
     about: "About the dev"
