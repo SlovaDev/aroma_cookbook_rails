@@ -4,6 +4,9 @@ ru:
     feature:
       header: "Кушать. Делиться. Повторить."
       detail: "Посмотрите, что Вы можете делать с Ароматом."
+    cta:
+      header: "Перестаньте ждать" 
+      header_two: "Начинайте готовить."
 
   detail:
     info: "Информация"
@@ -25,7 +28,7 @@ ru:
     languages:
       lang: "Язык"
       ru: "Русский"
-      en: "Англиский"
+      en: "English"
 
   cuisines:
     appetizer: "Закуска"

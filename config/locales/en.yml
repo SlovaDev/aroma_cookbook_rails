@@ -4,6 +4,9 @@ en:
     feature:
       header: "Cook. Share. Repeat."
       detail: "See what you can do with Aroma."
+    cta:
+      header: "Stop waiting." 
+      header_two: "Start cooking."
 
   detail:
     info: "Information"
@@ -24,7 +27,7 @@ en:
     contact: "Contact"
     languages:
       lang: "Language"
-      ru: "Russian"
+      ru: "Русский"
       en: "English"
 
   cuisines:
