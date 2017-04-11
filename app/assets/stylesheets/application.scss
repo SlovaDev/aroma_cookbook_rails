@@ -44,7 +44,8 @@ h5,
 h6 {
   font-family: 'Catamaran', 'Helvetica', 'Arial', 'sans-serif';
   font-weight: 200;
-  letter-spacing: 1px; }
+  letter-spacing: 1px;
+  margin: 10px; }
 
 p {
   font-size: 18px;
@@ -89,14 +90,14 @@ body {
   color: #a928c9;
   font-size: xx-large; }
   #mainNav .navbar-brand {
-    font-family: 'Comfortaa', cursive, 'Helvetica', 'Arial', 'sans-serif';
+    font-family: 'Comfortaa';
     font-weight: 200;
     letter-spacing: 10px;
     color: #a928c9; }
     #mainNav .navbar-brand:hover, #mainNav .navbar-brand:focus {
       color: #fcbd20; }
   #mainNav .navbar-toggle {
-    font-size: 12px;
+    font-size: 17px;
     color: #222222;
     padding: 8px 10px;
     float: right }
@@ -156,8 +157,7 @@ header{
   color: inherit; }
   header.masthead .header-content {
     text-align: center;
-    margin: 30px;
-    padding: 150px 0 50px;
+    padding: 150px 25px 50px;
     position: relative; }
     header.masthead .header-content .header-content-inner {
       position: relative;
@@ -175,8 +175,11 @@ header{
   header .welcome-container {
     max-width: 300px;
     margin: 0 auto 100px; }
-    header .welcome-container .welcome-mockup .image .cupcake {
-      margin-top: 13px; }
+    header.masthead .image-container .cupcake img {
+      border-radius: 3px;
+      margin: auto;
+      width: 50%;
+      padding: 10px; }
   @media (min-width: 768px) {
     header.masthead {
       min-height: 100%; }
@@ -266,7 +269,7 @@ section.cta {
   background-size: cover;
   -o-background-size: cover;
   background-position: center;
-  background-image: url("../img/bg-cta.jpg");
+  background-image: url("cta-content-background.jpg");
   padding: 250px 0; }
   section.cta .cta-content {
     position: relative;
@@ -275,15 +278,16 @@ section.cta {
       margin-top: 0;
       margin-bottom: 25px;
       color: white;
-      max-width: 450px;
       font-size: 50px; }
     @media (min-width: 768px) {
       section.cta .cta-content h2 {
+        display: inline-block;
+        margin-top: -140px;
         font-size: 80px; } }
   section.cta .overlay {
     height: 100%;
     width: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
+    
     position: absolute;
     top: 0;
     left: 0; }
