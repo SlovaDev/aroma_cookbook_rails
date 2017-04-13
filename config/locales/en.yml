@@ -1,11 +1,24 @@
 en:
   welcome:
-    detail: "Bring the family together again."
+    main: "Welcome"
+    detail: "Bring your family together again."
     feature:
       header: "Cook. Share. Repeat."
-      detail: "See what you can do with Aroma."
+      detail: "Check out what you can do with Aroma."
+      first:
+        header: "Stop Forgetting Recipes"
+        detail: "Easily list ingredients, note directions, and upload photos."
+      second:
+        header: "Find the Perfect Meal"
+        detail: "Search your cookbook by cuisine or by what haven't eaten in awhile."
+      third:
+        header: "Share with Family"
+        detail: "Receive notifications when your contacts add new recipes."
+      fourth:
+        header: "Join the Conversation"
+        detail: "Post your recommendations, or maybe some cooking failures!"
     cta:
-      header: "Stop waiting." 
+      header: "Stop waiting."
       header_two: "Start cooking."
 
   detail:

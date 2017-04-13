@@ -15,7 +15,7 @@
                   <div class="welcome-mockup">
                       <div class="image">
                           <div class="cupcake">
-                              <%= image_tag("cupcake-1") %>
+                            <%= image_tag("cupcake-1") %>
                           </div>
                       </div>
                   </div>
@@ -29,46 +29,41 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-12 text-center">
-                <div class="section-heading">
+              <div class="section-heading">
                   <h2><%= t('welcome.feature.header') %></h2>
-                    <p class="text-muted"><%= t('welcome.feature.detail') %></p>
-                    <hr>
-                </div>
+                  <p class="text-muted"><%= t('welcome.feature.detail') %></p>
+                  <hr>
+              </div>
             </div>
         </div>
         <div class="row">
-          <div class="col-md-4">
-              <div class="device-container">
-                  <div class="device-mockup" data-device="iphone6" data-orientation="portrait" data-color="white">
-                      <div class="device">
-                          <div class="screen">
-                              <!-- Demo image for screen mockup, you can put an image here, some HTML, an animation, video, or anything else! -->
-                              
-                              
-                          <div class="button">
-                              <!-- You can hook the "home button" to some JavaScript events or just remove it -->
-                          </div>
-                          
+            <div class="col-md-4">
+                <div class="device-container">
+                  <div class="device">
+                      <div class="screen">
+                          <!-- Demo image for screen mockup, you can put an image here, some HTML, an animation, video, or anything else! -->
+                          <%= image_tag("wedding_cake.png", class: "img-responsive") %>
                       </div>
+
                   </div>
-              </div>
-          </div>
-        </div>
+
+                </div>
+            </div>
             <div class="col-md-8">
                 <div class="container-fluid">
                     <div class="row">
                         <div class="col-md-6">
                             <div class="feature-item">
                                 <i class="fa fa-cutlery fa-md"></i>
-                                <h3>Stop Forgetting Recipes</h3>
-                                <p class="text-muted">Easily list ingredients, note directions, and upload photos.</p>
+                                <h3><%= t('welcome.feature.first.header') %></h3>
+                                <p class="text-muted"><%= t('welcome.feature.first.detail') %></p>
                             </div>
                         </div>
                         <div class="col-md-6">
                             <div class="feature-item">
                                 <i class="fa fa-search fa-md"></i>
-                                <h3>Find the Perfect Meal</h3>
-                                <p class="text-muted">Search your cookbook by cuisine or by what haven't eaten in awhile.</p>
+                                <h3><%= t('welcome.feature.second.header') %></h3>
+                                <p class="text-muted"><%= t('welcome.feature.second.detail') %></p>
                             </div>
                         </div>
                     </div>
@@ -76,15 +71,15 @@
                         <div class="col-md-6">
                             <div class="feature-item">
                                 <i class="fa fa-users fa-md"></i>
-                                <h3>Share with Family</h3>
-                                <p class="text-muted">Receive notifications when your contacts add new recipes.</p>
+                                <h3><%= t('welcome.feature.third.header') %></h3>
+                                <p class="text-muted"><%= t('welcome.feature.third.detail') %></p>
                             </div>
                         </div>
                         <div class="col-md-6">
                             <div class="feature-item">
                                 <i class="fa fa-comments fa-md"></i>
-                                <h3>Join the Conversation</h3>
-                                <p class="text-muted">Post your recommendations, or cooking failures!</p>
+                                <h3><%= t('welcome.feature.fourth.header') %></h3>
+                                <p class="text-muted"><%= t('welcome.feature.fourth.detail') %></p>
                             </div>
                         </div>
                     </div>
@@ -100,7 +95,7 @@
         <div class="section-heading">
           <h2><%= t('welcome.cta.header') %><br><%= t('welcome.cta.header_two') %></h2>
           <%= link_to t('forms.buttons.sign_up'), new_user_registration_path,
-          { style:'color:white; float:right;', class: 'btn btn-outline btn-xl page-scroll'} %>
+          { style:'color:white; float:right; margin-top:-10px;', class: 'btn btn-outline btn-xl page-scroll'} %>
         </div>
       </div>
   </div>
