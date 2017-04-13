@@ -9,6 +9,10 @@ class ApplicationController < ActionController::Base
     end
   end
 
+  def after_sign_in_path_for(resource)
+    cuisines_path
+  end
+
   def set_locale
     if cookies[:my_cookbook_locale]
       l = cookies[:my_cookbook_locale].to_sym

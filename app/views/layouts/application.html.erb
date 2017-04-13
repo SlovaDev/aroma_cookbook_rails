@@ -1,15 +1,14 @@
 <!DOCTYPE html>
 <html>
-
   <%= render 'layouts/head'%>
-
   <body id="page-top">
-
     <%= render 'layouts/navigation' %>
+    	<div class="container">
+    		<%= render 'layouts/flash' %>
 
-      <%= yield %>
-
+      		<%= yield %>
+      		
+  		</div>
     <%= render 'layouts/footer' %>
-
   </body>
 </html>
