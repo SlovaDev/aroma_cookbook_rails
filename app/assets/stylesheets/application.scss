@@ -41,7 +41,8 @@ h2,
 h3,
 h4,
 h5,
-h6 {
+h6
+label {
   font-family: 'Catamaran', 'Helvetica', 'Arial', 'sans-serif';
   font-weight: 200;
   letter-spacing: 1px;
@@ -79,6 +80,7 @@ body {
   -webkit-tap-highlight-color: #222222; }
 
 #mainNav {
+  z-index: 1;
   background-color: white;
   border-color: rgba(34, 34, 34, 0.05);
   -webkit-transition: all 0.35s;
@@ -337,7 +339,10 @@ footer {
     margin: 0; }
   footer ul {
     margin-bottom: 0; }
-    footer ul li a {
+    footer ul li {
+      display: inline;
+      margin: 10px; }
+      footer ul li a {
       font-size: 12px;
       color: white; }
       footer ul li a:hover, footer ul li a:focus, footer ul li a:active, footer ul li a.active {
@@ -360,7 +365,8 @@ footer {
   .btn-outline:hover, .btn-outline:focus, .btn-outline:active, .btn-outline.active {
     color: white;
     background-color: #a928c9;
-    border-color: rgba(255, 255, 255, 0.3) }
+    border-color: rgba(255, 255, 255, 0.3);
+    cursor: pointer; }
 
 .btn {
   font-family: 'Lato', 'Helvetica', 'Arial', 'sans-serif';
@@ -372,3 +378,49 @@ footer {
   margin: 40px 0px;
   padding: 1em 2em;
   font-size: 11px; }
+
+/* When position: sticky is supported but native behavior is ignored */
+.fixedsticky-withoutfixedfixed .fixedsticky-off,
+.fixed-supported .fixedsticky-off {
+  position: static;
+}
+.fixedsticky-withoutfixedfixed .fixedsticky-on,
+.fixed-supported .fixedsticky-on {
+  position: fixed;
+}
+.fixedsticky-dummy {
+  display: none;
+}
+.fixedsticky-on + .fixedsticky-dummy {
+  display: block;
+}
+
+.authentication {
+  width: 30em;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; }
+
+.card {
+  border: 0;
+}
+.card h1 {
+  text-align: center; }
+
+.card-block {
+  color: black;
+  text-align: left;
+  margin: 3em;
+  margin: 3em;
+}
+
+.fixedsticky { top: 0; }
+
+.fixedsticky {
+  position: -webkit-sticky;
+  position: -moz-sticky;
+  position: -ms-sticky;
+  position: -o-sticky;
+  position: sticky;
+}
