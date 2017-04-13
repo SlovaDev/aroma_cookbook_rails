@@ -16,7 +16,10 @@ en:
         detail: "Receive notifications when your contacts add new recipes."
       fourth:
         header: "Join the Conversation"
-        detail: "Post your recommendations, or cooking failures!"
+        detail: "Post your recommendations, or maybe some cooking failures!"
+    cta:
+      header: "Stop waiting."
+      header_two: "Start cooking."
 
   detail:
     info: "Information"
@@ -37,7 +40,7 @@ en:
     contact: "Contact"
     languages:
       lang: "Language"
-      ru: "Russian"
+      ru: "Русский"
       en: "English"
 
   cuisines:
@@ -85,7 +88,7 @@ en:
     messages:
       success: "Operation succeeded!"
     buttons:
-      sign_up: "Try Aroma Today!"
+      sign_up: "Try Aroma Today"
       log_in: "Log In"
       forgot_pass: "Forgotten Password?"
       save: "Save"
