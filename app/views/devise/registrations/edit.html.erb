@@ -1,28 +1,40 @@
-<% provide(:title, t('devise.registrations.edit_account')) %>
-<h1>
-  <%= t('devise.registrations.edit_account') %>
-</h1>
+<div class="container">
+  <div class="authentication">
+    <div class="card">
+      <div class="card-block" style="width:80%">
+        <div class="row">
+          <div class="col-md">
+            <% provide(:title, t('devise.registrations.edit_account')) %>
+            <h1>
+              <%= t('devise.registrations.edit_account') %>
+            </h1>
 
-<%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
-  <%= f.error_notification %>
+            <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
+              <%= f.error_notification %>
 
-  <div class="form-inputs">
-    <%= f.input :email, required: true, autofocus: true %>
+              <div class="form-inputs">
+                <%= f.input :email, required: true, autofocus: true %>
 
-    <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
-      <p>Currently waiting confirmation for: <%= resource.unconfirmed_email %></p>
-    <% end %>
+                <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
+                  <p>Currently waiting confirmation for: <%= resource.unconfirmed_email %></p>
+                <% end %>
 
-    <%= f.input :password, autocomplete: "off", hint: t('devise.registrations.pass_hint'), required: false %>
-    <%= f.input :password_confirmation, required: false %>
-    <%= f.input :current_password, autocomplete: "off", hint: t('devise.registrations.current_pass_hint'), required: true %>
+                <%= f.input :password, autocomplete: "off", hint: t('devise.registrations.pass_hint'), required: false %>
+                <%= f.input :password_confirmation, required: false %>
+                <%= f.input :current_password, autocomplete: "off", hint: t('devise.registrations.current_pass_hint'), required: true %>
+              </div>
+
+              <div class="form-actions">
+                <%= f.button :submit, t('forms.buttons.save') %>
+              </div>
+            <% end %>
+            <br>
+            <p> <%= link_to t('devise.registrations.cancel_account'), registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete %></p>
+
+            <%= link_to t('forms.buttons.back'), :back %>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
-
-  <div class="form-actions">
-    <%= f.button :submit, t('forms.buttons.save') %>
-  </div>
-<% end %>
-<br>
-<p> <%= link_to t('devise.registrations.cancel_account'), registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete %></p>
-
-<%= link_to t('forms.buttons.back'), :back %>
+</div>

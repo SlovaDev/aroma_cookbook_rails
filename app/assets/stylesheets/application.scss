@@ -330,13 +330,14 @@ section.contact {
         background-color: #d73925; }
 
 footer {
-  background-color: black;
-  padding: 25px 0;
-  color: rgba(255, 255, 255, 0.3);
+  background-color: transparent;
+  padding: 15px 0;
   text-align: center; }
   footer p {
     font-size: 12px;
-    margin: 0; }
+    background-color: transparent;
+    margin: 0;
+    color: black; }
   footer ul {
     margin-bottom: 0; }
     footer ul li {
@@ -344,7 +345,7 @@ footer {
       margin: 10px; }
       footer ul li a {
       font-size: 12px;
-      color: white; }
+      color: #a928c9; }
       footer ul li a:hover, footer ul li a:focus, footer ul li a:active, footer ul li a.active {
         text-decoration: none; }
 
@@ -396,11 +397,15 @@ footer {
 }
 
 .authentication {
-  width: 30em;
+  width: 100%;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
   justify-content: center; }
+@media (min-width: 768px) {
+  .authentication {
+  width: 60%; }
+}
 
 .card {
   border: 0;
@@ -412,15 +417,19 @@ footer {
   color: black;
   text-align: left;
   margin: 3em;
-  margin: 3em;
-}
-
-.fixedsticky { top: 0; }
+  margin: 3em; }
 
 .fixedsticky {
+  top: 0;
   position: -webkit-sticky;
   position: -moz-sticky;
   position: -ms-sticky;
   position: -o-sticky;
-  position: sticky;
-}
+  position: sticky; }
+.fixedsticky-bottom { 
+  bottom: 0;
+  position: -webkit-sticky;
+  position: -moz-sticky;
+  position: -ms-sticky;
+  position: -o-sticky;
+  position: sticky; }

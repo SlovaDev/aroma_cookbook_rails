@@ -1,4 +1,13 @@
-# Personal recipe tracker built using Ruby on Rails
+# Personal recipe tracking and sharing app 
+
+- Built using Ruby on Rails 5
+
+### Features
+
+- Personal cookbook to store and search recipes
+- Upload recipe photos
+- Share recipes with family and friends
+- Receive notifications when followers add recipes
 
 ## Getting started
 

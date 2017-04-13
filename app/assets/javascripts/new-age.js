@@ -7,4 +7,6 @@ $(document).ready(function() {
         $('.navbar-toggle:visible').click();
     });
 
-})(jQuery); // End of use strict
+	})(jQuery)
+}); 
+// End of use strict
