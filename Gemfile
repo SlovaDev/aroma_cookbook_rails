@@ -43,8 +43,8 @@ end
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem 'devise'
 gem 'bootstrap', '~> 4.0.0.alpha6'
-gem "font-awesome-rails"
+gem 'font-awesome-rails'
 gem 'simple_form', '~> 3.2', '>= 3.2.1'
-gem "cocoon"
+gem 'cocoon'
 gem 'rails-i18n'
 gem 'browser', '2.0.3'
