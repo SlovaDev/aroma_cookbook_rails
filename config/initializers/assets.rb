@@ -8,4 +8,4 @@ Rails.application.config.assets.version = '1.0'
 
 # Precompile additional assets.
 # application.js, application.css, and all non-JS/CSS in app/assets folder are already added.
-Rails.application.config.assets.precompile += %w( modernizr-2.8.3.min.js phone.css phone.js font-awesome.min.css simple-line-icons.css device-mockups.min.css )
+Rails.application.config.assets.precompile += %w( phone.css phone.js dashboard.css dashboard.js )
