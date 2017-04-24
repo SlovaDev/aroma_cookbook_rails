@@ -43,7 +43,7 @@ end
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem 'sprockets-rails', :require => 'sprockets/railtie'
 gem 'devise'
-gem 'bootstrap-sass', '~> 3.3.6'
+gem 'bootstrap-sass'
 gem 'font-awesome-sass'
 gem 'simple_form', '~> 3.2', '>= 3.2.1'
 gem 'cocoon'

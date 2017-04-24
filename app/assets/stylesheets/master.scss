@@ -1,8 +1,14 @@
+@import "bootstrap-sprockets";
 @import "bootstrap";
 @import "font-awesome";
-@import "font-awesome-sprockets";
 @import url('https://fonts.googleapis.com/css?family=Comfortaa');
 
+
+$purple: #a928c9;
+$light_purple: #da38f7;
+$orange: #ff961e;
+$light-gray: #777;
+$gray-medium-light: #eaeaea;
 /*!
 
  =========================================================
@@ -71,7 +77,7 @@ td,
 button.close {
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
-  font-family: "Roboto","Helvetica Neue",Arial,sans-serif;
+  font-family: 'Comfortaa', 'Muli', 'Helvetica', 'Arial', 'sans-serif';
   font-weight: 400;
 }
 
@@ -273,17 +279,19 @@ input:focus {
   margin: 10px 10px;
   color: #FFFFFF;
   line-height: 20px;
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: 'Comfortaa', 'Muli', 'Helvetica', 'Arial', 'sans-serif';
 }
 .sidebar .logo .simple-text {
   text-transform: uppercase;
   padding: 5px 0px;
   display: block;
-  font-size: 18px;
-  color: #FFFFFF;
+  color: black;
   text-align: center;
   font-weight: 400;
   line-height: 30px;
+}
+.sidebar .logo .simple-text:hover {
+  color: #ff961e;
 }
 .sidebar .logo-tim {
   border-radius: 50%;
@@ -344,7 +352,7 @@ body > .navbar-collapse .logo p {
   margin: 10px 10px;
   color: #FFFFFF;
   line-height: 20px;
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: 'Muli', 'Helvetica', 'Arial', 'sans-serif';
 }
 .sidebar .logo .simple-text,
 body > .navbar-collapse .logo .simple-text {
