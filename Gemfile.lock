@@ -45,9 +45,9 @@ GEM
     autoprefixer-rails (6.7.7.1)
       execjs
     bcrypt (3.1.11)
-    bootstrap (4.0.0.alpha6)
-      autoprefixer-rails (>= 6.0.3)
-      sass (>= 3.4.19)
+    bootstrap-sass (3.3.7)
+      autoprefixer-rails (>= 5.2.1)
+      sass (>= 3.3.4)
     browser (2.0.3)
     builder (3.2.3)
     byebug (9.0.6)
@@ -79,8 +79,8 @@ GEM
     erubis (2.7.0)
     execjs (2.7.0)
     ffi (1.9.17)
-    font-awesome-rails (4.7.0.1)
-      railties (>= 3.2, < 5.1)
+    font-awesome-sass (4.7.0)
+      sass (>= 3.2)
     formatador (0.2.5)
     globalid (0.3.7)
       activesupport (>= 4.1.0)
@@ -266,14 +266,14 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  bootstrap (~> 4.0.0.alpha6)
+  bootstrap-sass (~> 3.3.6)
   browser (= 2.0.3)
   byebug
   capybara
   cocoon
   coffee-rails (~> 4.2)
   devise
-  font-awesome-rails
+  font-awesome-sass
   guard-minitest (= 2.4.4)
   guard-rspec
   jbuilder (~> 2.5)
@@ -293,6 +293,7 @@ DEPENDENCIES
   simple_form (~> 3.2, >= 3.2.1)
   spring
   spring-watcher-listen (~> 2.0.0)
+  sprockets-rails
   sqlite3
   turbolinks (~> 5)
   tzinfo-data

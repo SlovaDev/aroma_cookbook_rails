@@ -10,7 +10,7 @@ class ApplicationController < ActionController::Base
   end
 
   def after_sign_in_path_for(resource)
-    cuisines_path
+    master_index_path
   end
 
   def set_locale
