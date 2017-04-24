@@ -1,5 +1,9 @@
 <% provide(:title, t('detail.info')) %>
+
+<%= render 'layouts/navigation' %>
+
 <h1><%= t('detail.info') %></h1>
+
 <p>
     <a href="http://www.github.com/SlovaDev/my_cookbook">
       <%= t('detail.code') %>
@@ -10,3 +14,5 @@
       <%= t('detail.about') %>
     </a>
 </p>
+
+<%= render 'layouts/footer' %>
