@@ -1,5 +1,5 @@
 <div class="wrapper">
-  <div class="sidebar" data-color="purple" data-image="/assets/sidebar.jpg">
+  <div class="sidebar" data-color="purple" data-image="/assets/images/sidebar-3.jpg">
 
     <div class="sidebar-wrapper">
       <div class="logo">
@@ -8,12 +8,17 @@
 
       <ul class="nav">
         <li class="active">
-          <a href="dashboard.html">
-            <i class="fa fa-cutlery"></i>
-            <p>Dashboard</p>
-          </a>
+          <%= link_to cuisines_path do %>
+            <i class="fa fa-book"></i>
+            <p><%= t('menu.cookbook') %></p>
+          <% end %>
         </li>
-
+        <li>
+          <%= link_to new_recipe_path do %>
+            <i class="fa fa-spoon"></i>
+            <p><%= t('menu.new_recipe') %></p>
+          <% end %>
+        </li>
       </ul>
     </div>
   </div>
@@ -56,7 +61,7 @@
         <div class="content">
             <div class="container-fluid">
                 <div class="row">
-
+                  
                 </div>
             </div>
         </div>

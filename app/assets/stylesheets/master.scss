@@ -1,5 +1,6 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
+@import "font-awesome-sprockets";
 @import "font-awesome";
 @import url('https://fonts.googleapis.com/css?family=Comfortaa');
 
@@ -237,7 +238,7 @@ input:focus {
 }
 
 .sidebar {
-  background: url(sidebar-5.jpg);
+  background: url(cookies.jpeg);
   position: absolute;
   top: 0;
   bottom: 0;
@@ -287,8 +288,9 @@ input:focus {
   display: block;
   color: black;
   text-align: center;
-  font-weight: 400;
+  font-weight: 900;
   line-height: 30px;
+  letter-spacing: 10px;
 }
 .sidebar .logo .simple-text:hover {
   color: #ff961e;

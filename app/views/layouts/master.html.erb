@@ -11,10 +11,9 @@
     <title><%= full_title(yield(:title)) %></title>
 
       <%= stylesheet_link_tag 'master', media: 'all', 'data-turbolinks-track': 'reload'%>
-      <%= stylesheet_link_tag 'pe-icon-7-stroke', media: 'all', 'data-turbolinks-track': 'reload'%>
 
       <%= javascript_include_tag 'master', 'data-turbolinks-track': 'reload' %>
-
+      <%= csrf_meta_tags %>
   </head>
 
   <body>
