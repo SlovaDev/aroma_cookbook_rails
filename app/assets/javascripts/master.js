@@ -101,11 +101,9 @@ lbd = {
             ul_content = ul_content + content_buff;
 
 
-            ul_content = '<div class="sidebar-wrapper">' +
-                            '<ul class="nav navbar-nav">' +
-                                ul_content +
-                            '</ul>' +
-                          '</div>';
+            ul_content =  '<ul class="nav navbar-nav">' +
+                              ul_content +
+                          '</ul>';
 
             navbar_content = logo_content + ul_content;
 
