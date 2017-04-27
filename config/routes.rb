@@ -5,8 +5,6 @@ Rails.application.routes.draw do
 
   devise_for :users
 
-  resources :master, only: [:index]
-
   resources :cuisines, only: [:index, :show]
   resources :recipes, except: [:index]
 end
