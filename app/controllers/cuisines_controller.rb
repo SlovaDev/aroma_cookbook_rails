@@ -1,4 +1,6 @@
 class CuisinesController < ApplicationController
+  layout 'master'
+
   before_action :verify_user
 
   def index

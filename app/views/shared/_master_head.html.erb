@@ -9,9 +9,11 @@
   <title><%= full_title(yield(:title)) %></title>
 
     <%= stylesheet_link_tag 'master', media: 'all', 'data-turbolinks-track': 'reload'%>
+    <%= stylesheet_link_tag 'animate.min.css', media: 'all', 'data-turbolinks-track': 'reload'%>
+    <%= stylesheet_link_tag 'demo', media: 'all', 'data-turbolinks-track': 'reload'%>
 
     <%= javascript_include_tag 'tether.min.js' %>
-    <%= javascript_include_tag 'jquery.min.js' %>
-    <%= javascript_include_tag 'master', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application'%>
+    <%= javascript_include_tag 'master'%>
     <%= csrf_meta_tags %>
 </head>

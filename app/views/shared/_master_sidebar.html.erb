@@ -1,0 +1,26 @@
+<div class="sidebar-wrapper">
+  <div class="logo">
+    <%= link_to t('menu.title'), master_index_path, class: 'simple-text'%>
+  </div>
+
+  <ul class="nav">
+    <li>
+      <%= link_to cuisines_path do %>
+        <i class="fa fa-book"></i>
+        <p><%= t('menu.cookbook') %></p>
+      <% end %>
+    </li>
+    <li>
+      <%= link_to new_recipe_path do %>
+        <i class="fa fa-spoon"></i>
+        <p><%= t('menu.new_recipe') %></p>
+      <% end %>
+    </li>
+    <li>
+      <%= link_to new_recipe_path do %>
+        <i class="fa fa-users"></i>
+        <p><%= t('menu.social') %></p>
+      <% end %>
+    </li>
+  </ul>
+</div>

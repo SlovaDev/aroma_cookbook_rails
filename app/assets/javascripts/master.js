@@ -100,10 +100,10 @@ lbd = {
             content_buff = $sidebar.find('.nav').html();
             ul_content = ul_content + content_buff;
 
-
-            ul_content =  '<ul class="nav navbar-nav">' +
-                              ul_content +
-                          '</ul>';
+            ul_content =
+                        '<ul class="nav navbar-nav">' +
+                            ul_content +
+                        '</ul>';
 
             navbar_content = logo_content + ul_content;
 

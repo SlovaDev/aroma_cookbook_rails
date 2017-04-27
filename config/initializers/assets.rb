@@ -8,6 +8,6 @@ Rails.application.config.assets.version = '1.0'
 
 # Precompile additional assets.
 # application.js, application.css, and all non-JS/CSS in app/assets folder are already added.
-Rails.application.config.assets.precompile += %w( fixedsticky.js master.js new-age.js phone.js welcome.js tether.min.js jquery.min.js)
-Rails.application.config.assets.precompile += %w( cusine.css.scss master.scss phone.scc.scss )
+Rails.application.config.assets.precompile += %w( fixedsticky.js master.js new-age.js phone.js welcome.js tether.min.js)
+Rails.application.config.assets.precompile += %w( animate.min.css cusine.css.scss demo.css master.scss phone.scc.scss )
 Rails.application.config.assets.paths << Rails.root.join("app", "assets")

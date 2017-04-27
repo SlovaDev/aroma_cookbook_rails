@@ -28,9 +28,12 @@ en:
 
   menu:
     title: "Aroma"
+    dashboard: "Dashboard"
+    recipes: "Recipes"
     new_recipe: "Add Recipe"
     cookbook: "My Cookbook"
-    edit_account: "Edit Account"
+    social: "Social"
+    account: "Account"
     log_in: "Log In"
     log_out: "Log Out"
     sign_up: "Sign Up"
@@ -120,3 +123,6 @@ en:
         email: "Email"
         password: "Password"
         password_confirmation: "Password Confirmation"
+
+  social: 
+    header: "Social"

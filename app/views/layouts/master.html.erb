@@ -4,8 +4,30 @@
   <%= render 'shared/master_head' %>
 
   <body>
+  	<div class="wrapper">
+			<div class="sidebar" data-color="purple" data-image="/assets/images/cookies.jpeg">
 
-    <%= yield %>
+				<%= render 'shared/master_sidebar' %>
 
+			</div>	
+
+			<div class="main-panel">
+
+				<%= render 'shared/master_navigation' %>
+
+				<div class="content">
+            <div class="container-fluid">
+                <div class="row">
+
+                	<%= yield %>
+
+                </div>
+            </div>
+        </div>
+
+    		<%= render 'shared/master_footer' %>
+    		
+  		</div>
+    </div>
   </body>
 </html>

@@ -29,8 +29,11 @@ ru:
   menu:
     title: "Аромат"
     new_recipe: "Добавить рецепт"
+    recipes: "Рецепты"
+    dashboard: "Панель Приборов"
     cookbook: "Кулинарная Книга"
-    edit_account: "Редиактиробать Счет"
+    social: "Семья"
+    account: "Счет"
     log_in: "Входить"
     log_out: "Выходить"
     sign_up: "Регистрироваться"
