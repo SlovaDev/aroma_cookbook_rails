@@ -111,7 +111,7 @@ en:
         name: "Recipe"
       cuisine:
         name: "Cuisine"
-        cuisine: ["Appetizer", "Bread", "Soup", "Entree", "Salad", "Dessert", "Drink", "Miscellaneous"]
+        cuisine: ["Appetizer", "Bread", "Soup", "Entree", "Salad", "Dessert", "Drink", "Miscellaneous", "Breakfast"]
       ingredient:
         item: "Item"
         quantity: "Quantity"
