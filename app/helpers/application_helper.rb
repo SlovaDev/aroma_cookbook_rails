@@ -38,7 +38,7 @@ module ApplicationHelper
       when 'recipes'
         return t('menu.recipes')
       when 'cuisines'
-        return t('my_cookbook')
+        return t('menu.cookbook')
       else
         return t('menu.dashboard')
       end
