@@ -25,7 +25,8 @@ module ApplicationHelper
 
   def footer_helper style = ""
     content_tag(:ul, class: "#{style}") do
-      content_tag(:li, (link_to t('footer.help'), help_path)) +
+      content_tag(:li, (link_to t('footer.help'), help_index_path)) +
+      content_tag(:li, (link_to t('footer.contact'), contact_path)) +
       content_tag(:li, (link_to t('footer.languages.en'), change_locale_path(:en))) +
       content_tag(:li, (link_to t('footer.languages.ru'), change_locale_path(:ru)))
     end

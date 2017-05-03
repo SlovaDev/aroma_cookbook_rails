@@ -12,5 +12,9 @@ module MyCookbook
     # -- all .rb files in that directory are automatically loaded.
     I18n.available_locales = [:en, :ru]
     I18n.default_locale = :ru
+
+    config.to_prepare do
+    	Devise::RegistrationsController.layout proc{ |controller| user_signed_in? ? "master" : "application" }  
+  	end
   end
 end

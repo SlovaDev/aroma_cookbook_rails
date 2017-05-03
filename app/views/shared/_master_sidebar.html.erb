@@ -18,8 +18,14 @@
     </li>
     <li>
       <%= link_to new_recipe_path do %>
-        <i class="fa fa-users"></i>
-        <p><%= t('menu.social') %></p>
+        <i class="fa fa-calendar"></i>
+        <p><%= t('menu.planner') %></p>
+      <% end %>
+    </li>
+    <li>
+      <%= link_to new_recipe_path do %>
+        <i class="fa fa-shopping-basket"></i>
+        <p><%= t('menu.list') %></p>
       <% end %>
     </li>
   </ul>

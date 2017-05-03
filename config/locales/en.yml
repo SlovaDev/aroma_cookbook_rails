@@ -21,10 +21,21 @@ en:
       header: "Stop waiting."
       header_two: "Start cooking."
 
-  detail:
-    info: "Information"
-    about: "About the dev"
-    code: "Source code"
+  help:
+    how: "How do I...?"
+    general:
+      what: "What is Aroma?"
+      use: "How do I add recipes?"
+      calendar: "How do I manage the recipe calendar?"
+      list: "How do I manage the grocery list?"
+    social:
+      search: "How do I search for other users?"
+      public: "How do I publish recipes for other users to see?"
+    account:
+      manage: "How do I manage my account?"
+      delete: "How do I delete my account?"
+      upgrade: "How can I upgrage my account"
+
 
   menu:
     title: "Aroma"
@@ -32,7 +43,8 @@ en:
     recipes: "Recipes"
     new_recipe: "Add Recipe"
     cookbook: "My Cookbook"
-    social: "Social"
+    planner: "Planner"
+    list: "Grocery List"
     account: "Settings"
     help: "Help"
     log_in: "Log In"
@@ -40,7 +52,7 @@ en:
     sign_up: "Sign Up"
 
   footer:
-    about: "About"
+    help: "Help"
     contact: "Contact"
     languages:
       lang: "Language"
