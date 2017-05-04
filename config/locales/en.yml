@@ -28,10 +28,12 @@ en:
       use: "How do I add recipes?"
       calendar: "How do I manage the recipe calendar?"
       list: "How do I manage the grocery list?"
-    social:
+    social: 
+      header: "Sharing"
       search: "How do I search for other users?"
       public: "How do I publish recipes for other users to see?"
     account:
+      header: "Account"
       manage: "How do I manage my account?"
       delete: "How do I delete my account?"
       upgrade: "How can I upgrage my account"
@@ -61,11 +63,12 @@ en:
 
   cuisines:
     appetizer: "Appetizer"
+    entree: "Entree"
+    dessert: "Dessert"
     bread: "Bread"
     soup: "Soup"
-    entree: "Entree"
     salad: "Salad"
-    dessert: "Dessert"
+    breakfast: "Breakfast"
     drink: "Drink"
     misc: "Miscellaneous"
 
@@ -124,7 +127,7 @@ en:
         name: "Recipe"
       cuisine:
         name: "Cuisine"
-        cuisine: ["Appetizer", "Bread", "Soup", "Entree", "Salad", "Dessert", "Drink", "Miscellaneous", "Breakfast"]
+        cuisine: ["Appetizer", "Entree", "Dessert", "Bread", "Soup", "Salad", "Breakfast", "Drink", "Miscellaneous" ]
       ingredient:
         item: "Item"
         quantity: "Quantity"
