@@ -86,6 +86,7 @@ en:
     new:
       name: "Recipe name"
       title: "New Recipe"
+      added: "Added"
       ingredients:
         title: "Ingredients"
         qnt: "qnt"

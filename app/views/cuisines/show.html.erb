@@ -1,19 +1,41 @@
 <% provide(:title, t('activerecord.model.cuisine.cuisine')[((params[:id]).to_i - 1)]) %>
-<h1><%= t('activerecord.model.cuisine.cuisine')[((params[:id]).to_i - 1)] %></h1>
 
-<div class="row">
-  <div class="col-md-8">
-    <% @cuisine.recipes.each do |recipe| %>
-        <div class="media">
-          <div class="media-body">
-            <h4 class="media-heading">
-              <%= link_to recipe.name, recipe_path(recipe) %>
-            </h4>
-          </div>
+<div class="content">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="card">
+                    <div class="header">
+                        <h4 class="title"><%= t('activerecord.model.cuisine.cuisine')[((params[:id]).to_i - 1)] %></h4>
+                        <%= link_to (t('recipes.new.title')), new_recipe_path, class: 'btn btn-success pull-right', style: 'padding:5px;' %>
+                    </div>
+                    <div class="content table-responsive table-full-width">
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th><%= t('recipes.new.name') %></th>
+                                    <th><%= t('recipes.new.added') %></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                              <% @cuisine.recipes.each do |recipe| %>
+                                <tr>
+                                  <td class="td-actions"><%= link_to recipe.name, recipe_path(recipe) %></td>
+                                  <td class="td-actions"><%= link_to recipe.created_at.to_formatted_s(:long), recipe_path(recipe) %></td>
+                                  <td class="td-actions text-right">
+                                      <%= link_to edit_recipe_path(recipe), class: "btn btn-success btn-simple btn-lg" do %>
+                                          <i class="fa fa-edit "></i>
+                                      <% end %>
+                                      <%= link_to recipe_path(recipe), method: :delete, data: { confirm: 'Are you sure?' }, remote: true, class: "btn btn-danger btn-simple btn-lg" do %>
+                                        <i class="fa fa-times"></i>
+                                      <% end %>
+                                    </td>
+                              <% end %>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
         </div>
-      <% end %>
-  </div>
+    </div>
 </div>
-
-<%= link_to "New Recipe", new_recipe_path, class: 'btn btn-success' %>
-<%= link_to 'Back', cuisines_path, class: 'btn btn-alert' %>

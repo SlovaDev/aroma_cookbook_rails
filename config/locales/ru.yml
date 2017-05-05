@@ -86,6 +86,7 @@ ru:
     new:
       name: "Имя рецепта"
       title: "Добавить Рецепт"
+      added: "Добовлен"
       ingredients:
         title: "Ингредиенты"
         qnt: "Количество"
