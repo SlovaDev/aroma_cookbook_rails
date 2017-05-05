@@ -14,6 +14,7 @@ gem 'coffee-rails', '~> 4.2'
 gem 'jquery-rails'
 gem 'turbolinks', '~> 5'
 gem 'jbuilder', '~> 2.5'
+gem 'faker'
 
 group :development, :test do
   gem 'byebug', platform: :mri
@@ -26,7 +27,6 @@ group :development, :test do
   gem 'minitest-reporters',       '1.1.9'
   gem 'guard-rspec',              require: false
   gem 'guard-minitest',           '2.4.4'
-  gem 'faker'
 end
 
 group :development do
