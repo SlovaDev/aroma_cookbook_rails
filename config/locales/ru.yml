@@ -46,6 +46,8 @@ ru:
   menu:
     title: "Аромат"
     new_recipe: "Добавить рецепт"
+    planner: "Планировщик"
+    list: "Список Продуктов"
     recipes: "Рецепты"
     dashboard: "Панель Приборов"
     cookbook: "Кулинарная Книга"

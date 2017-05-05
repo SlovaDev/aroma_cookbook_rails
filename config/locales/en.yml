@@ -28,7 +28,7 @@ en:
       use: "How do I add recipes?"
       calendar: "How do I manage the recipe calendar?"
       list: "How do I manage the grocery list?"
-    social: 
+    social:
       header: "Sharing"
       search: "How do I search for other users?"
       public: "How do I publish recipes for other users to see?"
@@ -44,6 +44,8 @@ en:
     dashboard: "Dashboard"
     recipes: "Recipes"
     new_recipe: "Add Recipe"
+    planner: "Recipe Planner"
+    list: "Grocery List"
     cookbook: "My Cookbook"
     planner: "Planner"
     list: "Grocery List"
@@ -140,5 +142,5 @@ en:
         password: "Password"
         password_confirmation: "Password Confirmation"
 
-  social: 
+  social:
     header: "Social"
