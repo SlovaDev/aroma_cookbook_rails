@@ -237,7 +237,7 @@ input:focus {
 }
 
 .sidebar {
-  background:url('<%= asset_path("sidebar-3.jpg") %>');
+  background:url('sidebar-3.jpg');
   position: absolute;
   top: 0;
   bottom: 0;
@@ -1576,8 +1576,7 @@ body > .navbar-collapse[data-color="purple"]:after {
   background-color: transparent;
 }
 .navbar-default:not(.navbar-transparent) .btn-default:hover {
-  color: #1DC7EA;
-  border-color: #1DC7EA;
+  border-color: $orange;
 }
 .navbar-default:not(.navbar-transparent) .btn-neutral, .navbar-default:not(.navbar-transparent) .btn-neutral:hover, .navbar-default:not(.navbar-transparent) .btn-neutral:active {
   color: #9A9A9A;

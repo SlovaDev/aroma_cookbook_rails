@@ -1,85 +1,81 @@
 <% provide(:title, t('footer.help')) %>
 
-<%= render 'shared/application_navigation' %>
-
-	<div class="container">
-		<div class="content">
-            <div class="container-fluid">
-                <div class="row">
-                    <div class="col-md-6">
-                        <div class="card">
-                            <div class="header">
-                                <h4 class="title"><%= t('help.how') %></h4>
-                            </div>
-                            <div class="content table-responsive table-full-width">
-                                <table class="table table-hover table-striped">
-                                    <tbody>
-                                        <tr>
-                                        	<td><%= link_to(t('help.general.what'), help_path) %></td>
-                                        </tr>
-                                        <tr>
-                                        	<td><%= link_to(t('help.general.use'), help_path) %></td>
-                                        </tr>
-                                        <tr>
-                                        	<td><%= link_to(t('help.general.calendar'), help_path) %></td>
-                                        </tr>
-                                        <tr>
-                                        	<td><%= link_to(t('help.general.list'), help_path) %></td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-
-                            </div>
+<div class="container">
+	<div class="content">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="card">
+                        <div class="header">
+                            <h4 class="title"><%= t('help.how') %></h4>
                         </div>
-                    </div>
+                        <div class="content table-responsive table-full-width">
+                            <table class="table table-hover table-striped">
+                                <tbody>
+                                    <tr>
+                                    	<td><%= link_to(t('help.general.what'), help_path) %></td>
+                                    </tr>
+                                    <tr>
+                                    	<td><%= link_to(t('help.general.use'), help_path) %></td>
+                                    </tr>
+                                    <tr>
+                                    	<td><%= link_to(t('help.general.calendar'), help_path) %></td>
+                                    </tr>
+                                    <tr>
+                                    	<td><%= link_to(t('help.general.list'), help_path) %></td>
+                                    </tr>
+                                </tbody>
+                            </table>
 
-                    <div class="col-md-6">
-                        <div class="card">
-                            <div class="header">
-                                <h4 class="title"><%= t('help.social.header') %></h4>
-                            </div>
-                            <div class="content table-responsive table-full-width">
-                                <table class="table table-hover table-striped">
-                                    <tbody>
-                                        <tr>
-                                        	<td><%= link_to(t('help.social.search'), help_path) %></td>
-                                        </tr>
-                                        <tr>
-                                        	<td><%= link_to(t('help.social.public'), help_path) %></td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-
-                            </div>
                         </div>
                     </div>
                 </div>
-                <div class="row">
-                	<div class="col-md-6">
-                        <div class="card">
-                            <div class="header">
-                                <h4 class="title"><%= t('help.account.header') %></h4>
-                            </div>
-                            <div class="content table-responsive table-full-width">
-                                <table class="table table-hover table-striped">
-                                    <tbody>
-                                        <tr>
-                                        	<td><%= link_to(t('help.account.manage'), help_path) %></td>
-                                        </tr>
-                                        <tr>
-                                        	<td><%= link_to(t('help.account.delete'), help_path) %></td>
-                                        </tr>
-                                        <tr>
-                                        	<td><%= link_to(t('help.account.upgrade'), help_path) %></td>
-                                        </tr>
-                                    </tbody>
-                                </table>
 
-                            </div>
+                <div class="col-md-6">
+                    <div class="card">
+                        <div class="header">
+                            <h4 class="title"><%= t('help.social.header') %></h4>
                         </div>
+                        <div class="content table-responsive table-full-width">
+                            <table class="table table-hover table-striped">
+                                <tbody>
+                                    <tr>
+                                    	<td><%= link_to(t('help.social.search'), help_path) %></td>
+                                    </tr>
+                                    <tr>
+                                    	<td><%= link_to(t('help.social.public'), help_path) %></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+
+                        </div>
+                    </div>
                 </div>
             </div>
-        </div>
-     </div>
+            <div class="row">
+            	<div class="col-md-6">
+                    <div class="card">
+                        <div class="header">
+                            <h4 class="title"><%= t('help.account.header') %></h4>
+                        </div>
+                        <div class="content table-responsive table-full-width">
+                            <table class="table table-hover table-striped">
+                                <tbody>
+                                    <tr>
+                                    	<td><%= link_to(t('help.account.manage'), help_path) %></td>
+                                    </tr>
+                                    <tr>
+                                    	<td><%= link_to(t('help.account.delete'), help_path) %></td>
+                                    </tr>
+                                    <tr>
+                                    	<td><%= link_to(t('help.account.upgrade'), help_path) %></td>
+                                    </tr>
+                                </tbody>
+                            </table>
 
-<%= render 'shared/application_footer' %>
+                        </div>
+                    </div>
+            </div>
+        </div>
+    </div>
+ </div>

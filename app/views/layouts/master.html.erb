@@ -4,25 +4,32 @@
   <%= render 'shared/master_head' %>
 
   <body>
-  	<div class="wrapper">
-			<div class="sidebar" data-color="purple" data-image=<%= asset_path("sidebar-3.jpg") %>>
+    <div class="wrapper">
+      <div class="sidebar" data-color="purple" data-image=<%= asset_path("sidebar-3.jpg") %>>
 
-				<%= render 'shared/master_sidebar' %>
+        <% if controller.controller_name == 'help' %>
+            <%= render 'shared/help_sidebar' %>
+        <% else %>
+            <%= render 'shared/master_sidebar' %>
+        <% end %>
 
-			</div>
+      </div>
+  		<div class="main-panel">
 
-			<div class="main-panel">
+  			<% if controller.controller_name == 'help' %>
+          <%= render 'shared/help_navigation' %>
+        <% else %>
+            <%= render 'shared/master_navigation' %>
+        <% end %>
 
-				<%= render 'shared/master_navigation' %>
+  			<div class="content">
+          <div class="container-fluid">
+            <div class="row">
 
-				<div class="content">
-            <div class="container-fluid">
-                <div class="row">
+              <%= yield %>
 
-                	<%= yield %>
-
-                </div>
             </div>
+          </div>
         </div>
 
     		<%= render 'shared/master_footer' %>

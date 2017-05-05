@@ -40,6 +40,8 @@ module ApplicationHelper
         return t('menu.recipes')
       when 'cuisines'
         return t('menu.cookbook')
+      when 'help'
+        return t('menu.help')
       else
         return t('menu.dashboard')
       end

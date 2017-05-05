@@ -37,7 +37,13 @@ en:
       manage: "How do I manage my account?"
       delete: "How do I delete my account?"
       upgrade: "How can I upgrage my account"
-
+  contact:
+    header: "Contact"
+    outreach: "You can contact the developer directly at: "
+    code: "Check out the application code on "
+    wish: "I hope you are enjoying the application. Please feel free to reach out to me if you have any reocmmendations."
+    message: "Your message"
+    email: "Email"
 
   menu:
     title: "Aroma"

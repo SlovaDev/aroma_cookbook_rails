@@ -1,6 +1,6 @@
 class HelpController < ApplicationController
-	layout 'application'
-
+	layout 'master'
+	
 	def index
 	end
 

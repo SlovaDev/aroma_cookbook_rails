@@ -38,10 +38,13 @@ ru:
       delete: "How do I delete my account?"
       upgrade: "How can I upgrage my account"
 
-  detail:
-    info: "Информация"
-    about: "Обо мне"
-    code: "Код"
+  contact:
+    header: "Контакт"
+    outreach: "Вы можете связаться с разработчиком напрямую по адресу: "
+    code: "Проверьте код приложения на "
+    wish: "Надеюсь, Вам понравится приложение. Пожалуйста, не стесняйтесь связаться со мной, если у вас есть какие-либо рекомендации. Спасибо!"
+    message: "Ваше сообщение"
+    email: "Электронная почта"
 
   menu:
     title: "Аромат"
@@ -59,7 +62,7 @@ ru:
     sign_up: "Регистрироваться"
 
   footer:
-    about: "Информация"
+    help: "Помочь"
     contact: "Контакт"
     languages:
       lang: "Язык"

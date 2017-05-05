@@ -2,31 +2,29 @@
 
 <%= render 'shared/application_navigation' %>
 
-<header>
-  <div class="container">
-      <div class="row">
-          <div class="col-sm-7">
-              <div class="header-content">
-                  <div class="header-content-inner">
-                      <h1><%= t('welcome.detail') %></h1>
-                      <%= link_to t('forms.buttons.sign_up'), new_user_registration_path, class: 'btn btn-outline btn-xl page-scroll' %>
-                  </div>
-              </div>
-          </div>
-          <div class="col-sm-5">
-              <div class="welcome-container">
-                  <div class="welcome-mockup">
-                      <div class="image">
-                          <div class="cupcake">
-                            <%= image_tag("cupcake-1") %>
-                          </div>
-                      </div>
-                  </div>
-              </div>
-          </div>
-      </div>
-  </div>
-</header>
+<div class="container">
+    <div class="row">
+        <div class="col-sm-7">
+            <div class="header-content">
+                <div class="header-content-inner">
+                    <h1><%= t('welcome.detail') %></h1>
+                    <%= link_to t('forms.buttons.sign_up'), new_user_registration_path, class: 'btn btn-outline btn-xl page-scroll' %>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-5">
+            <div class="welcome-container">
+                <div class="welcome-mockup">
+                    <div class="image">
+                        <div class="cupcake">
+                          <%= image_tag("cupcake-1") %>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 
 <section id="features" class="features">
     <div class="container">
