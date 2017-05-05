@@ -12,11 +12,11 @@ en:
         header: "Find the Perfect Meal"
         detail: "Search your cookbook by cuisine or by what haven't eaten in awhile."
       third:
+        header: "Plan Ahead"
+        detail: "Add recipes to planner and create grocery lists with needed ingredients."
+      fourth:
         header: "Share with Family"
         detail: "Receive notifications when your contacts add new recipes."
-      fourth:
-        header: "Join the Conversation"
-        detail: "Post your recommendations, or maybe some cooking failures!"
     cta:
       header: "Stop waiting."
       header_two: "Start cooking."

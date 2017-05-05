@@ -17,8 +17,7 @@ module ApplicationHelper
       end
     else
       content_tag(:ul, class: "nav navbar-nav navbar-right") do
-        content_tag(:li, (link_to t('menu.log_in'), new_user_session_path)) +
-        content_tag(:li, (link_to t('menu.sign_up'), new_user_registration_path))
+        content_tag(:li, (link_to t('menu.log_in'), new_user_session_path))
       end
     end
   end

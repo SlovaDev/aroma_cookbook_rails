@@ -14,7 +14,11 @@ module MyCookbook
     I18n.default_locale = :ru
 
     config.to_prepare do
-    	Devise::RegistrationsController.layout proc{ |controller| user_signed_in? ? "master" : "application" }  
-  	end
+      Devise::SessionsController.layout "auxillary"
+      Devise::RegistrationsController.layout "auxillary"
+      Devise::ConfirmationsController.layout "auxillary"
+      Devise::UnlocksController.layout "auxillary"            
+      Devise::PasswordsController.layout "auxillary"        
+    end
   end
 end

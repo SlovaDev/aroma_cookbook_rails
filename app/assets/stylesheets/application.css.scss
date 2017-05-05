@@ -259,8 +259,8 @@ section.features .feature-item {
     font-size: 30px; }
   section.features .feature-item i {
     font-size: 80px;
-    background: -webkit-linear-gradient(to left, #F28BA3, #a928c9);
-    background: linear-gradient(to left, #F28BA3, #a928c9);
+    background: -webkit-linear-gradient(to bottom right, #F28BA3, #a928c9);
+    background: linear-gradient(to bottom right, #F28BA3, #a928c9);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent; }
 
@@ -344,8 +344,10 @@ footer {
       display: inline;
       margin: 10px; }
       footer ul li a {
-      font-size: 12px;
-      color: #a928c9; }
+        text-transform: uppercase;
+        font-weight: 200;
+        font-size: 12px;
+        color: #a928c9; }
       footer ul li a:hover, footer ul li a:focus, footer ul li a:active, footer ul li a.active {
         text-decoration: none; }
 

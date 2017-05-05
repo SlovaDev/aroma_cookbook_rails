@@ -3,8 +3,8 @@
 <div class="container" style="height:100%;">
   <div class="authentication">
     <div class="card">
-      <div class="card-block">
-      <h1><%= t('devise.confirmations.title') %></h1>
+      <div class="card-block" style="padding:2em">
+      <h3><%= t('devise.confirmations.title') %></h3>
 
       <%= simple_form_for(resource, as: resource_name, url: confirmation_path(resource_name), html: { method: :post }) do |f| %>
         <%= f.error_notification %>

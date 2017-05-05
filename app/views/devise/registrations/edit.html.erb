@@ -3,11 +3,9 @@
     <div class="card">
       <div class="card-block" style="width:80%; margin:0 auto">
         <div class="row">
-          <div class="col-md">
+          <div class="col-md" style="padding:2em">
             <% provide(:title, t('devise.registrations.edit_account')) %>
-            <h1>
-              <%= t('devise.registrations.edit_account') %>
-            </h1>
+            <h3><%= t('devise.registrations.edit_account') %></h3>
 
             <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
               <%= f.error_notification %>

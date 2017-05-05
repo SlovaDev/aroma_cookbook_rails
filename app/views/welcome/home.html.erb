@@ -3,7 +3,7 @@
 <%= render 'shared/application_navigation' %>
 
 <div class="container">
-    <div class="row">
+    <div class="row" style="margin-top:1.5em">
         <div class="col-sm-7">
             <div class="header-content">
                 <div class="header-content-inner">
@@ -43,7 +43,7 @@
                   <div class="device">
                       <div class="screen">
                           <!-- Demo image for screen mockup, you can put an image here, some HTML, an animation, video, or anything else! -->
-                          <%= image_tag("wedding_cake.png", class: "img-responsive") %>
+                          <%= image_tag("welcome_cake.png", class: "img-responsive") %>
                       </div>
 
                   </div>
@@ -71,14 +71,14 @@
                     <div class="row">
                         <div class="col-md-6">
                             <div class="feature-item">
-                                <i class="fa fa-users fa-md"></i>
+                                <i class="fa fa-calendar fa-md"></i>
                                 <h3><%= t('welcome.feature.third.header') %></h3>
                                 <p class="text-muted"><%= t('welcome.feature.third.detail') %></p>
                             </div>
                         </div>
                         <div class="col-md-6">
                             <div class="feature-item">
-                                <i class="fa fa-comments fa-md"></i>
+                                <i class="fa fa-users fa-md"></i>
                                 <h3><%= t('welcome.feature.fourth.header') %></h3>
                                 <p class="text-muted"><%= t('welcome.feature.fourth.detail') %></p>
                             </div>
