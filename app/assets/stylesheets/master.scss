@@ -237,7 +237,7 @@ input:focus {
 }
 
 .sidebar {
-  background: url(sidebar-3.jpg);
+  background:url('<%= asset_path("sidebar-3.jpg") %>');
   position: absolute;
   top: 0;
   bottom: 0;
@@ -1548,7 +1548,7 @@ body > .navbar-collapse[data-color="purple"]:after {
   border-bottom: 1px solid rgba(0, 0, 0, 0.1);
 }
 .navbar-default .navbar-nav > li > a:not(.btn) {
-  
+
 }
 .navbar-default .navbar-nav > .active > a,
 .navbar-default .navbar-nav > .active > a:not(.btn):hover,
@@ -3434,8 +3434,8 @@ body > .navbar-collapse[data-color="purple"]:after {
   text-align: center;
   padding-bottom: 1.5em;
 }
-.cuisine-item:hover { 
-  transform: scale(1.05); 
+.cuisine-item:hover {
+  transform: scale(1.05);
 }
 .cuisine-image {
   position: relative;

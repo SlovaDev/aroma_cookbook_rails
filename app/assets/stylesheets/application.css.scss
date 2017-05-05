@@ -276,7 +276,7 @@ section.cta {
   background-size: cover;
   -o-background-size: cover;
   background-position: center;
-  background-image: url("cta-content-background.jpg");
+  background-image:url('<%= asset_path("cta-content-background.jpg") %>');
   padding: 250px 0; }
   section.cta .cta-content {
     position: relative;
