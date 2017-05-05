@@ -1,22 +1,18 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html class="no-js">
 
-  <%= render 'layouts/phone/head' %>
+  <%= render 'shared/application_head'%>
 
-  <body>
-    <header role="banner">
-      <%= render 'layouts/phone/logo' %>
-      <%= render 'layouts/phone/navigation' %>
-    </header>
+  <body id="page-top">
+
+    <%= render 'shared/flash' %>
 
     <div id="main" role="main">
       <div class="container">
+
         <%= yield %>
+
       </div>
     </div>
-
-    <%= render 'layouts/phone/footer' %>
-    <%= render 'layouts/phone/scripts' %>
-    
   </body>
 </html>

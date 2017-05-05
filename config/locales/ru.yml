@@ -21,6 +21,23 @@ ru:
       header: "Перестаньте ждать."
       header_two: "Начинайте готовить."
 
+  help:
+    how: "How do I...?"
+    general:
+      what: "What is Aroma?"
+      use: "How do I add recipes?"
+      calendar: "How do I manage the recipe calendar?"
+      list: "How do I manage the grocery list?"
+    social:
+      header: "Sharing"
+      search: "How do I search for other users?"
+      public: "How do I publish recipes for other users to see?"
+    account:
+      header: "Account"
+      manage: "How do I manage my account?"
+      delete: "How do I delete my account?"
+      upgrade: "How can I upgrage my account"
+
   detail:
     info: "Информация"
     about: "Обо мне"
@@ -29,11 +46,14 @@ ru:
   menu:
     title: "Аромат"
     new_recipe: "Добавить рецепт"
+    planner: "Планировщик"
+    list: "Список Продуктов"
     recipes: "Рецепты"
     dashboard: "Панель Приборов"
     cookbook: "Кулинарная Книга"
     social: "Семья"
-    account: "Счет"
+    account: "Настройки"
+    help: "Помочь"
     log_in: "Входить"
     log_out: "Выходить"
     sign_up: "Регистрироваться"
@@ -48,11 +68,12 @@ ru:
 
   cuisines:
     appetizer: "Закуска"
+    entree: "Основное"
+    dessert: "Десерт"
     bread: "Хлеб"
     soup: "Суп"
-    entree: "Основное блюдо"
     salad: "Салат"
-    dessert: "Десерт"
+    breakfast: "Завтрак"
     drink: "Напиток"
     misc: "Разносторонний"
 
@@ -110,7 +131,7 @@ ru:
         name: "Peцепт"
       cuisine:
         name: "Кухня"
-        cuisine: ["Закуска", "Хлеб", "Суп", "Основное блюдо", "Салат", "Десерт", "Напиток", "Разносторонний"]
+        cuisine: ["Закуска", "Основное", "Десерт", "Хлеб", "Суп", "Салат", "Завтрак", "Напиток", "Разносторонний"]
       ingredient:
         item: "Продукт"
         quantity: "Количество"

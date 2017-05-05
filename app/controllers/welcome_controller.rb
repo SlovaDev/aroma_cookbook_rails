@@ -2,9 +2,9 @@ class WelcomeController < ApplicationController
   def home
   end
 
-  def contact
+  def help
   end
 
-  def about
+  def contact
   end
 end

@@ -1,5 +1,5 @@
 class MasterController < ApplicationController
-  layout "master"
+  layout 'master'
 
   def index
   end

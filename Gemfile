@@ -25,6 +25,7 @@ group :development, :test do
   gem 'minitest-reporters',       '1.1.9'
   gem 'guard-rspec',              require: false
   gem 'guard-minitest',           '2.4.4'
+  gem 'faker'
 end
 
 group :development do

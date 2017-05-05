@@ -1,20 +1,15 @@
-<% provide(:title) %>
-<h1>
-  <%= t('activerecord.model.cuisine.name') %>
-</h1>
+<% provide(:title, t('menu.title')) %>
 
 <div class="row">
     <% @cuisines.each_with_index do |cuisine, index| %>
         <div class="col-md-4">
-          <div class="cuisine">
-            <div class="image-wrapper">
-              <h2>
-                <%= link_to cuisine do %>
-                  <%= image_tag cuisine.image_url %>
-                <% end %>
-                  <%= link_to t('activerecord.model.cuisine.cuisine')[index], cuisine %>
-              </h2>
-            </div>
+          <div class="cuisine-item">
+            <%= link_to cuisine do %>
+              <%= image_tag(cuisine.image_url, class: "cuisine-image") %>
+            <% end %>
+              <div class="cuisine-text">
+                <%= link_to t('activerecord.model.cuisine.cuisine')[index], cuisine %>
+              </div>
           </div>
         </div>
     <% end %>
