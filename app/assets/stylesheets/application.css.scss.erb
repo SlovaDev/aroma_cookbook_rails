@@ -2,6 +2,7 @@
 @import "font-awesome-sprockets";
 @import "font-awesome";
 @import url('https://fonts.googleapis.com/css?family=Comfortaa');
+//= depend_on_asset "cta-content-background.jpg"
 /*!
  * Start Bootstrap - New Age v4.0.0-alpha (http://startbootstrap.com/template-overviews/new-age)
  * Copyright 2013-2017 Start Bootstrap
@@ -276,7 +277,7 @@ section.cta {
   background-size: cover;
   -o-background-size: cover;
   background-position: center;
-  background-image:url("cta-content-background.jpg");
+  background-image:url('<%= asset_path("cta-content-background.jpg") %> ');
   padding: 250px 0; }
   section.cta .cta-content {
     position: relative;
@@ -436,6 +437,6 @@ footer {
   position: -o-sticky;
   position: sticky; }
 
-.contact-thumbnail { 
+.contact-thumbnail {
   min-height: 40em;
 }

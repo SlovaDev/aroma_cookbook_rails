@@ -23,5 +23,9 @@
 # Ignore Spring files.
 /spring/*.pid
 
+# Ignore sensitives
 /config/secrets
 *.DS_Store
+config/database.yml
+
+public/assets/**
