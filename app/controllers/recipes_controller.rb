@@ -2,8 +2,10 @@ class RecipesController < ApplicationController
   layout 'master'
   before_action :authenticate_user!
   before_action :set_recipe, only: [:show, :edit, :update, :destroy]
+  before_action :set_cuisine, only: :destroy
 
   def show
+    @user = current_user
   end
 
   def new
@@ -35,18 +37,30 @@ class RecipesController < ApplicationController
   end
 
   def destroy
+    desroyed_cuisine = Recipe.find(params[:id]).cuisine_id
     if @recipe.destroy
-      redirect_to cuisines_path
+      flash.now[:notice] = t('recipes.delete.success', recipe: @recipe)
+      if params[:from]=='recipe_show'
+        redirect_to cuisine_path(recipe_cuisine)
+      end
     else
-      flash.now[:alert] = "There was a problem deleting the recipe. Please try again."
-      render :show
+      flash.now[:alert] = t('recipes.delete.failure', recipe: @recipe)
     end
+  end
+
+  respond_to do |format|
+    format.html
+    format.js
   end
 
   private
 
   def set_recipe
     @recipe = Recipe.find(params[:id])
+  end
+
+  def set_cuisine
+    @recipe_cuisine = Recipe.find(params[:id]).cuisine_id
   end
 
   def recipe_params

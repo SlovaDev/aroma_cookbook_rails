@@ -1,4 +1,10 @@
 ru:
+  date:
+    formats:
+      default: "%d/%m/%Y"
+      short: "%b %d"
+      long: "%B %d, %Y"
+
   welcome:
     main: "Добро пожаловать"
     detail: "Собирайтесь со своей семьей снова."
@@ -27,11 +33,12 @@ ru:
       what: "What is Aroma?"
       use: "How do I add recipes?"
       calendar: "How do I manage the recipe calendar?"
-      list: "How do I manage the grocery list?"
+      list: "How do I add and remove items from the grocery list?"
     social:
       header: "Sharing"
       search: "How do I search for other users?"
-      public: "How do I publish recipes for other users to see?"
+      public: "How do I share recipes with other users?"
+      privacy: "Can I keep my recipes private?"
     account:
       header: "Account"
       manage: "How do I manage my account?"
@@ -44,7 +51,7 @@ ru:
     code: "Проверьте код приложения на "
     wish: "Надеюсь, Вам понравится приложение. Пожалуйста, не стесняйтесь связаться со мной, если у вас есть какие-либо рекомендации. Спасибо!"
     message: "Ваше сообщение"
-    email: "Электронная почта"
+    email: "Ваша электронная почта"
 
   menu:
     title: "Аромат"
@@ -98,12 +105,17 @@ ru:
       cuisines:
         title: "Кухня"
         choose: "Выбрайте, пожалуйста"
-      buttons:
-        add_ingredient: "Добавить Ингредиент"
-        add_direction: "Добавить еще"
-        save: "Сохранить"
-        back: "Назад"
-        remove: "Удалить"
+    buttons:
+      add_ingredient: "Добавить Ингредиент"
+      add_direction: "Добавить еще"
+      save: "Сохранить"
+      edit: "Редактировать"
+      back: "Назад"
+      remove: "Удалить"
+    delete:
+      check: "Бы уверенно?"
+      success: "%{recipe} удалено успешно."
+      failure: "Была проблема. Пожалуйста, попробуйте еще раз."
     ingredients:
       item: "Ингредиент"
       quantity: "Кoличество"

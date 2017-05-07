@@ -70,7 +70,7 @@ class RecipesControllerTest < ActionController::TestCase
 
   test "should delete recipe for authenticated users" do
     sign_in @user
-    delete :destroy, params: { id: @recipe.id }
-    assert_redirected_to cuisines_path
+    delete :destroy, format: :js, params: { id: @recipe.id }
+    assert_response :success
   end
 end

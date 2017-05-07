@@ -1,4 +1,10 @@
 en:
+  date:
+    formats:
+      default: "%d/%m/%Y"
+      short: "%b %d"
+      long: "%B %d, %Y"
+
   welcome:
     main: "Welcome"
     detail: "Bring your family together again."
@@ -27,23 +33,25 @@ en:
       what: "What is Aroma?"
       use: "How do I add recipes?"
       calendar: "How do I manage the recipe calendar?"
-      list: "How do I manage the grocery list?"
+      list: "How do I add and remove items from the grocery list?"
     social:
       header: "Sharing"
       search: "How do I search for other users?"
-      public: "How do I publish recipes for other users to see?"
+      public: "How do I share recipes with other users?"
+      privacy: "Can I keep my recipes private?"
     account:
       header: "Account"
       manage: "How do I manage my account?"
       delete: "How do I delete my account?"
       upgrade: "How can I upgrage my account"
+
   contact:
     header: "Contact"
     outreach: "You can contact the developer directly at: "
     code: "Check out the application code on "
     wish: "I hope you are enjoying the application. Please feel free to reach out to me if you have any reocmmendations."
     message: "Your message"
-    email: "Email"
+    email: "Your email"
 
   menu:
     title: "Aroma"
@@ -95,16 +103,20 @@ en:
       directions:
         title: "Directions"
         placeholder: "Add direction..."
-        remove: "Remove"
       cuisines:
         title: "Cuisine"
         choose: "Please choose"
-      buttons:
-        add_ingredient: "Add Ingredient"
-        add_direction: "Add Direction"
-        save: "Save"
-        back: "Back"
-        remove: "Remove"
+    buttons:
+      add_ingredient: "Add Ingredient"
+      add_direction: "Add Direction"
+      save: "Save"
+      edit: "Edit"
+      back: "Back"
+      remove: "Remove"
+    delete:
+      check: "Are you sure?"
+      success: "%{recipe} deleted successfully."
+      failure: "There was a problem deleting %{recipe}. Please try again shortly."
     ingredients:
       item: "Item"
       quantity: "Quantity"

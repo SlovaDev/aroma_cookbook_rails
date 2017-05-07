@@ -47,10 +47,10 @@
   </div>
   <div class="row">
     <div class="col-md-12">
-      <%= link_to "Back", url_for(:back), class: "btn btn-default" %>
-      <% if user_signed_in? %>
-        <%= link_to "Edit", edit_recipe_path, class: "btn btn-default" %>
-        <%= link_to "Delete", recipe_path, method: :delete, data: { confirm: 'Are you sure you want to delete this post?' } %>
+      <%= link_to t('recipes.buttons.back'), url_for(:back), class: "btn btn-default" %>
+      <% if current_user %>
+        <%= link_to t('recipes.buttons.edit'), edit_recipe_path, class: "btn btn-default" %>
+        <%= link_to t('recipes.buttons.remove'), recipe_path(:from=>"recipe_show"), method: :delete, data: { confirm: t('recipes.delete.check') }, remote: true %>
       <% end %>
     </div>
   </div>

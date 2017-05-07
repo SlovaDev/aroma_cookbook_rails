@@ -53,7 +53,6 @@ if ENV=["recipes"]
   end
   puts "50 Recipies created"
 
-  puts "Creating 75 directions..."
   75.times do
     Direction.create!(
       direction: Faker::Lorem.sentence(10, true),
@@ -62,7 +61,6 @@ if ENV=["recipes"]
   end
   puts "Created 75 Directions"
 
-  puts "Creating 150 ingredients..."
   150.times do
     Ingredient.create!(
       item: Faker::Food.ingredient,
