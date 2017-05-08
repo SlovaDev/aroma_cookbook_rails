@@ -1882,7 +1882,7 @@ body > .navbar-collapse[data-color="purple"]:after {
 .card .image {
   width: 100%;
   overflow: hidden;
-  height: 260px;
+  height: 15em;
   border-radius: 4px 4px 0 0;
   position: relative;
   -webkit-transform-style: preserve-3d;
@@ -1979,13 +1979,14 @@ body > .navbar-collapse[data-color="purple"]:after {
 .card .footer div {
   display: inline-block;
 }
-.card .author {
-  font-size: 12px;
-  font-weight: 600;
-  text-transform: uppercase;
+.card .ingredients {
+  padding: 15px 30px 0;
 }
-.card .author i {
-  font-size: 14px;
+.card .directions {
+  padding: 15px 30px 0;
+}
+.card .buttons {
+  padding: 15px 45px 0;
 }
 .card h6 {
   font-size: 12px;
@@ -2026,11 +2027,6 @@ body > .navbar-collapse[data-color="purple"]:after {
 .card-user .image-plain {
   height: 0;
   margin-top: 110px;
-}
-.card-user .author {
-  text-align: center;
-  text-transform: none;
-  margin-top: -70px;
 }
 .card-user .avatar {
   width: 124px;

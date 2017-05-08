@@ -3,7 +3,7 @@ ru:
     formats:
       default: "%d/%m/%Y"
       short: "%b %d"
-      long: "%B %d, %Y"
+      long: "%-d %B %Y"
 
   welcome:
     main: "Добро пожаловать"
@@ -105,6 +105,9 @@ ru:
       cuisines:
         title: "Кухня"
         choose: "Выбрайте, пожалуйста"
+    show: 
+      created_by: "Добавлено"
+      date: "в"
     buttons:
       add_ingredient: "Добавить Ингредиент"
       add_direction: "Добавить еще"

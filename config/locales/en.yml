@@ -3,7 +3,7 @@ en:
     formats:
       default: "%d/%m/%Y"
       short: "%b %d"
-      long: "%B %d, %Y"
+      long: "%-d %B %Y"
 
   welcome:
     main: "Welcome"
@@ -106,6 +106,9 @@ en:
       cuisines:
         title: "Cuisine"
         choose: "Please choose"
+    show: 
+      created_by: "Created by"
+      date: "on"
     buttons:
       add_ingredient: "Add Ingredient"
       add_direction: "Add Direction"

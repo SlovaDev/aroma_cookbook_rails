@@ -1,57 +1,70 @@
 <% provide(:title, @recipe.name) %>
-<p id="notice"><%= alert %></p>
 
-<div class="main_content">
-  <div class="row">
-    <div class="col-md-8">
-      <div>
-        <h1>
-          <%= @recipe.name %>
-        </h1>
-        <% if @recipe.user %>
-          <p>
-            Created by <%= @recipe.user.email %> on
-            <%= @recipe.created_at.strftime('%-d %B %Y') %>
-          </p>
-        <% end %>
+<div class="content">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="card">
+
+          <div class="image"><%= image_tag('roller.jpg') %></div>
+          <div class="content">
+            <div class="header">
+              <div class="col-md-6">
+                <h2 class="title"><%= @recipe.name %></h2>
+              </div>
+              <div class="col-md-6">
+                <p style="float:right">
+                  <%= t('recipes.show.created_by') + " " + @recipe.user.email + " " + t('recipes.show.date') + " " + I18n.l(@recipe.created_at, format: :short) %>
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="header">
+            <div class="row">
+              <!-- float:none to override some strange gem source behavior -->
+              <div class="col-md-12">
+                <div class="ingredients">
+                  <h3><%= t('recipes.new.ingredients.title') %></h3>
+                  <ul>
+                    <% @recipe.ingredients.each do |ingredient| %>
+                      <li>
+                        <%= ingredient.quantity %>
+                        <%= ingredient.measure %>
+                        <%= ingredient.item %>
+                      </li>
+                    <% end %>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-md-12">
+                <div class="directions">
+                  <h3><%= t('recipes.new.directions.title') %></h3>
+                  <ul>
+                    <% @recipe.directions.each do |direction| %>
+                      <li>
+                        <%= direction.direction %>
+                      </li>
+                    <% end %>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="buttons">
+                <%= link_to t('recipes.buttons.back'), url_for(:back), class: "btn btn-default" %>
+                <% if current_user %>
+                  <%= link_to t('recipes.buttons.edit'), edit_recipe_path, class: "btn btn-default" %>
+                  <%= link_to t('recipes.buttons.remove'), recipe_path(:from=>"recipe_show"), method: :delete, data: { confirm: t('recipes.delete.check') }, remote: true %>
+                <% end %>
+              </div>
+            </div>
+          </div>
+          <hr>
+          <%= render 'shared/social_media_buttons' %>
+
+        </div>
       </div>
-    </div>
-  </div>
-  <div class="row">
-    <div class="col-md-6">
-      <div id="ingredients">
-        <h2>Ingredients</h2>
-        <ul>
-          <% @recipe.ingredients.each do |ingredient| %>
-            <li>
-              <%= ingredient.quantity %>
-              <%= ingredient.measure %>
-              <%= ingredient.item %>
-            </li>
-          <% end %>
-        </ul>
-      </div>
-    </div>
-    <div class="col-md-6">
-      <div id="directions">
-        <h2>Directions</h2>
-        <ul>
-          <% @recipe.directions.each do |direction| %>
-            <li>
-              <%= direction.direction %>
-            </li>
-          <% end %>
-        </ul>
-      </div>
-    </div>
-  </div>
-  <div class="row">
-    <div class="col-md-12">
-      <%= link_to t('recipes.buttons.back'), url_for(:back), class: "btn btn-default" %>
-      <% if current_user %>
-        <%= link_to t('recipes.buttons.edit'), edit_recipe_path, class: "btn btn-default" %>
-        <%= link_to t('recipes.buttons.remove'), recipe_path(:from=>"recipe_show"), method: :delete, data: { confirm: t('recipes.delete.check') }, remote: true %>
-      <% end %>
     </div>
   </div>
 </div>

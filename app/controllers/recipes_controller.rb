@@ -41,7 +41,7 @@ class RecipesController < ApplicationController
     if @recipe.destroy
       flash.now[:notice] = t('recipes.delete.success', recipe: @recipe)
       if params[:from]=='recipe_show'
-        redirect_to cuisine_path(recipe_cuisine)
+        redirect_to cuisine_path(@recipe_cuisine)
       end
     else
       flash.now[:alert] = t('recipes.delete.failure', recipe: @recipe)
