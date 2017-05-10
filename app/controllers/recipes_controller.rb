@@ -17,9 +17,10 @@ class RecipesController < ApplicationController
     @recipe.user = current_user
 
     if @recipe.save
-      redirect_to @recipe, notice: "Recipe added!"
+      redirect_to @recipe
+      flash[:notice] = t('recipes.save.success', recipe: @recipe.name)
     else
-      flash.now[:alert] = "There was a problem saving the recipe. Please try again."
+      flash.now[:alert] = t('recipes.save.failure', recipe: @recipe.name)
       render :new
     end
   end
@@ -30,21 +31,21 @@ class RecipesController < ApplicationController
   def update
     if @recipe.update_attributes(recipe_params)
       redirect_to @recipe
+      flash[:notice] = t('recipes.update.success', recipe: @recipe.name)
     else
-      flash.now[:alert] = "There was a problem saving the recipe. Please try again."
+      flash.now[:alert] = t('recipes.save.failure', recipe: @recipe.name)
       render :edit
     end
   end
 
   def destroy
-    desroyed_cuisine = Recipe.find(params[:id]).cuisine_id
     if @recipe.destroy
-      flash.now[:notice] = t('recipes.delete.success', recipe: @recipe)
       if params[:from]=='recipe_show'
         redirect_to cuisine_path(@recipe_cuisine)
+        flash[:notice] = t('recipes.delete.success', recipe: @recipe.name)
       end
     else
-      flash.now[:alert] = t('recipes.delete.failure', recipe: @recipe)
+      flash.now[:alert] = t('recipes.delete.failure', recipe: @recipe.name)
     end
   end
 

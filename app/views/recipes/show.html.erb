@@ -22,10 +22,9 @@
 
           <div class="header">
             <div class="row">
-              <!-- float:none to override some strange gem source behavior -->
               <div class="col-md-12">
                 <div class="ingredients">
-                  <h3><%= t('recipes.new.ingredients.title') %></h3>
+                  <h4><%= t('recipes.new.ingredients.title').upcase %></h4>
                   <ul>
                     <% @recipe.ingredients.each do |ingredient| %>
                       <li>
@@ -39,7 +38,7 @@
               </div>
               <div class="col-md-12">
                 <div class="directions">
-                  <h3><%= t('recipes.new.directions.title') %></h3>
+                  <h4><%= t('recipes.new.directions.title').upcase %></h4>
                   <ul>
                     <% @recipe.directions.each do |direction| %>
                       <li>

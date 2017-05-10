@@ -1938,7 +1938,6 @@ body > .navbar-collapse[data-color="purple"]:after {
 .card label {
   font-size: 14px;
   font-weight: 400;
-  color: #9A9A9A;
   margin-bottom: 0px;
 }
 .card .category i,
@@ -3477,4 +3476,9 @@ body > .navbar-collapse[data-color="purple"]:after {
   vertical-align: top;
   display: inline-block;
   *display: inline;
+}
+.cuisine-select {
+  height: 39px;
+  width: 143px;
+  opacity: 0.8;
 }

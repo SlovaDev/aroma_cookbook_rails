@@ -1,4 +1,17 @@
 <% provide(:title, "Edit #{@recipe.name}") %>
-<h1>Edit Recipe</h1>
-<%=  %>
-<%= render partial: 'form', locals: { recipe: @recipe } %>
+
+<div class="content">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="card" style="min-height:100%">
+          <div class="header"><h2><%= @recipe.name %></h2></div>
+            <div class="content">
+              <%= render partial: 'form', locals: { recipe: @recipe } %>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

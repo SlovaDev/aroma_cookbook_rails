@@ -105,6 +105,11 @@ ru:
       cuisines:
         title: "Кухня"
         choose: "Выбрайте"
+    save:
+      success: "%{recipe} успешно сохранено."
+      failure: "Была проблема. Пожалуйста, попробуйте еще раз."
+    update:
+      success: "%{recipe} успешно обновлен."
     show:
       created_by: "Добавлено"
       date: "в"

@@ -5,9 +5,9 @@
   <% end %>
 <% end %>
   <div class="row">
-    <div class="col-md-10">
+    <div class="col-md-6">
       <div class="form-group">
-        <%= f.label :name, t('recipes.new.name') %>
+        <%= f.label :name, ("<h4>" + t('recipes.new.name') + "</h4>").html_safe %>
         <%= f.text_field :name, placeholder: t('recipes.new.name'), class: "form-control" %>
       </div>
     </div>
@@ -15,15 +15,15 @@
   <div class="row">
     <div class="col-md-10">
       <div class="form-group">
-        <%= f.label :cuisine, t('recipes.new.cuisines.title') %><br>
-        <%= f.select :cuisine_id, cuisine_categories %>
+        <%= f.label :cuisine, ("<h4>" + t('recipes.new.cuisines.title') + "</h4>").html_safe %><br>
+        <%= f.select :cuisine_id, cuisine_categories, {}, class: "form-button btn btn-warning cuisine-select" %>
       </div>
     </div>
   </div>
   <div class="row">
     <div class="col-md-10">
-      <h4><%= t('recipes.new.ingredients.title') %></h4>
       <div class="form-group">
+        <%= f.label :ingredients, ("<h4>" + t('recipes.new.ingredients.title') + "</h4>").html_safe %>
         <%= f.fields_for :ingredients do |ingredient| %>
           <%= render 'ingredient_fields', f: ingredient %>
         <% end %>
@@ -35,8 +35,8 @@
   </div>
   <div class="row">
     <div class="col-md-10">
-      <h4><%= t('recipes.new.directions.title') %></h4>
       <div class="form-group">
+        <%= f.label :directions, ("<h4>" + t('recipes.new.directions.title') + "</h4>").html_safe %>
         <%= f.fields_for :directions do |direction| %>
           <%= render 'direction_fields', f: direction %>
         <% end %>
@@ -48,8 +48,8 @@
   </div>
   <div class="row">
     <div class="col-m-10" style="padding:1em">
-      <%= f.button t('recipes.buttons.save'), class: "form-button btn btn-success pull-left"%>
-      <%= link_to t('recipes.buttons.back'), url_for(:back), class: "form-button btn btn-default pull-right"%>
+      <%= f.button t('recipes.buttons.save'), class: "form-button btn btn-success pull-left", style: "margin-right:1em"%>
+      <%= link_to t('recipes.buttons.back'), url_for(:back), class: "form-button btn btn-default"%>
     </div>
   </div><br>
 <% end %>
