@@ -1,48 +1,55 @@
 <%= form_for recipe, html: { multipart: true } do |f| %>
 <% if recipe.errors.any? %>
   <% recipe.errors.full_messages.each do |msg| %>
-      <p><%= msg %></p>
+      <p class="text-warning"><%= msg %></p>
   <% end %>
 <% end %>
-  <div class="form-group">
-    <%= f.label :name, t('recipes.new.name') %>
-    <%= f.text_field :name, placeholder: t('recipes.new.name'), class: "form-control" %>
+  <div class="row">
+    <div class="col-md-10">
+      <div class="form-group">
+        <%= f.label :name, t('recipes.new.name') %>
+        <%= f.text_field :name, placeholder: t('recipes.new.name'), class: "form-control" %>
+      </div>
+    </div>
   </div>
-  <div class="col-md-12">
-    <div class="row">
-      <div class="col-md-12">
-        <div class="form-group">
-          <h4><%= t('recipes.new.ingredients.title') %></h4>
-            <%= f.fields_for :ingredients do |ingredient| %>
-              <%= render 'ingredient_fields', f: ingredient %>
-            <% end %>
-          <div class="links">
-            <%= link_to_add_association t('recipes.buttons.add_ingredient'), f, :ingredients, class: "form-button btn btn-warning" %>
-          </div>
+  <div class="row">
+    <div class="col-md-10">
+      <div class="form-group">
+        <%= f.label :cuisine, t('recipes.new.cuisines.title') %><br>
+        <%= f.select :cuisine_id, cuisine_categories %>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-10">
+      <h4><%= t('recipes.new.ingredients.title') %></h4>
+      <div class="form-group">
+        <%= f.fields_for :ingredients do |ingredient| %>
+          <%= render 'ingredient_fields', f: ingredient %>
+        <% end %>
+        <div class="links">
+          <%= link_to_add_association t('recipes.buttons.add_ingredient'), f, :ingredients, class: "form-button btn btn-warning" %>
         </div>
       </div>
     </div>
-  </div
-  <div class="col-md-12">
-    <div class="row">
-      <div class="col-md-12">
-        <div class="col-md-12">
-          <div class="form-group">
-            <h4><%= t('recipes.new.directions.title') %></h4>
-            <%= f.fields_for :directions do |direction| %>
-              <%= render 'direction_fields', f: direction %>
-            <% end %>
-            <div class="links">
-              <%= link_to_add_association t('recipes.buttons.add_direction'), f, :directions, class: "form-button btn btn-warning" %>
-            </div>
-          </div>
+  </div>
+  <div class="row">
+    <div class="col-md-10">
+      <h4><%= t('recipes.new.directions.title') %></h4>
+      <div class="form-group">
+        <%= f.fields_for :directions do |direction| %>
+          <%= render 'direction_fields', f: direction %>
+        <% end %>
+        <div class="links">
+          <%= link_to_add_association t('recipes.buttons.add_direction'), f, :directions, class: "form-button btn btn-warning" %>
         </div>
       </div>
-      <div class="form-inline clearfix col-md-12">
-      <div class="col-m-6" style="padding:1em">
-        <%= f.button t('recipes.buttons.save'), class: "form-button btn btn-success pull-left"%>
-        <%= link_to t('recipes.buttons.back'), url_for(:back), class: "form-button btn btn-default pull-right"%>
-      </div>
-    </div><br>
+    </div>
   </div>
+  <div class="row">
+    <div class="col-m-10" style="padding:1em">
+      <%= f.button t('recipes.buttons.save'), class: "form-button btn btn-success pull-left"%>
+      <%= link_to t('recipes.buttons.back'), url_for(:back), class: "form-button btn btn-default pull-right"%>
+    </div>
+  </div><br>
 <% end %>

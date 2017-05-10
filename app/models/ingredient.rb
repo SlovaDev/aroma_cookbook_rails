@@ -1,7 +1,7 @@
 class Ingredient < ApplicationRecord
-  belongs_to :recipe
+  belongs_to :recipe, optional: true
   after_initialize :init
-  validates :item, :quantity, 
+  validates :item, 
               presence: true, 
               length: { maximum: 25 }
 

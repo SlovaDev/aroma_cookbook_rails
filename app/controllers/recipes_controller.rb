@@ -20,7 +20,7 @@ class RecipesController < ApplicationController
       redirect_to @recipe, notice: "Recipe added!"
     else
       flash.now[:alert] = "There was a problem saving the recipe. Please try again."
-      render 'new'
+      render :new
     end
   end
 
