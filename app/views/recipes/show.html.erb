@@ -14,7 +14,9 @@
               </div>
               <div class="col-md-6">
                 <p style="float:right">
-                  <%= t('recipes.show.created_by') + " " + @recipe.user.email + " " + t('recipes.show.date') + " " + I18n.l(@recipe.created_at, format: :short) %>
+                  <% if @recipe.user %>
+                    <%= t('recipes.show.created_by') + " " + @recipe.user.email + " " + t('recipes.show.date') + " " + I18n.l(@recipe.created_at, format: :short) %>
+                  <% end %>
                 </p>
               </div>
             </div>

@@ -13,6 +13,8 @@ feature 'User creates a recipe' do
 
     click_button 'Save'
 
-    expect(page.current_path).to eq recipes_path
+    recipe = Recipe.last
+
+    expect(page.current_path).to eq recipe_path(recipe.id)
   end
 end
