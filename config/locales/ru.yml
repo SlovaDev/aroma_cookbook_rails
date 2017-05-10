@@ -104,8 +104,8 @@ ru:
         placeholder: "Добавить инструкцию..."
       cuisines:
         title: "Кухня"
-        choose: "Выбрайте, пожалуйста"
-    show: 
+        choose: "Выбрайте"
+    show:
       created_by: "Добавлено"
       date: "в"
     buttons:

@@ -105,8 +105,8 @@ en:
         placeholder: "Add direction..."
       cuisines:
         title: "Cuisine"
-        choose: "Please choose"
-    show: 
+        choose: "Select"
+    show:
       created_by: "Created by"
       date: "on"
     buttons:

@@ -7,7 +7,8 @@
         <div class="card">
           <div class="header">
             <h4 class="title"><%= t('activerecord.model.cuisine.cuisine')[((params[:id]).to_i - 1)] %></h4>
-            <%= link_to (t('recipes.new.title')), new_recipe_path, class: 'btn btn-success pull-right', style: 'padding:5px;' %>
+            <%= link_to (t('recipes.new.title')), new_recipe_path(cuisine_id: @cuisine.id
+            ), class: 'btn btn-success pull-right', style: 'padding:5px;' %>
           </div>
           <div class="content table-responsive table-full-width">
             <table class="table">

@@ -50,13 +50,16 @@
                 </div>
               </div>
             </div>
+            <br>
             <div class="row">
               <div class="buttons">
-                <%= link_to t('recipes.buttons.back'), url_for(:back), class: "btn btn-default" %>
+                <div style="float:right">
+                  <%= link_to t('recipes.buttons.back'), url_for(:back), class: "btn btn-default"%>
+                </div>
                 <% if current_user %>
-                  <%= link_to t('recipes.buttons.edit'), edit_recipe_path, class: "btn btn-default" %>
-                  <%= link_to t('recipes.buttons.remove'), recipe_path(:from=>"recipe_show"), method: :delete, data: { confirm: t('recipes.delete.check') }, remote: true %>
+                  <%= link_to t('recipes.buttons.edit'), edit_recipe_path, class: "btn btn-success" %>
                 <% end %>
+                  <%= link_to t('recipes.buttons.remove'), recipe_path(:from=>"recipe_show"), method: :delete, data: { confirm: t('recipes.delete.check') }, remote: true, class: "btn btn-danger" %>
               </div>
             </div>
           </div>
