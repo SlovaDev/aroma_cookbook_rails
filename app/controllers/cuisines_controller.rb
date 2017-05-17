@@ -9,6 +9,7 @@ class CuisinesController < ApplicationController
 
   def show
     @cuisine = Cuisine.find(params[:id])
-    @recipes = @cuisine.recipes.order('created_at DESC')
+    @recipes = @cuisine.recipes.order('created_at DESC').page(params[:page]).per(7)
+    puts params
   end
 end

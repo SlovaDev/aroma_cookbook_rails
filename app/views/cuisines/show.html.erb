@@ -19,7 +19,7 @@
                 </tr>
               </thead>
               <tbody>
-                <% @cuisine.recipes.each do |recipe| %>
+                <% @recipes.each do |recipe| %>
                   <%= content_tag :tr, id: "recipe-#{recipe.id}" do %>
                     <td class="td-actions">
                       <%= link_to recipe.name, recipe_path(recipe) %>
@@ -41,6 +41,9 @@
                 <% end %>
               </tbody>
             </table>
+            <ul class="pagination" style="padding-left: 1em">
+              <%= paginate @recipes%>
+            </ul>
           </div>
         </div>
       </div>
