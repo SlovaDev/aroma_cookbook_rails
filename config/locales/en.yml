@@ -10,7 +10,7 @@ en:
     detail: "Bring your family together again."
     feature:
       header: "Cook. Share. Repeat."
-      detail: "Check out what you can do with Aroma."
+      detail: "Check out what you can do with Aromat."
       first:
         header: "Stop Forgetting Recipes"
         detail: "Easily list ingredients, note directions, and upload photos."
@@ -30,7 +30,7 @@ en:
   help:
     how: "How do I...?"
     general:
-      what: "What is Aroma?"
+      what: "What is Aromat?"
       use: "How do I add recipes?"
       calendar: "How do I manage the recipe calendar?"
       list: "How do I add and remove items from the grocery list?"
@@ -47,14 +47,14 @@ en:
 
   contact:
     header: "Contact"
-    outreach: "You can contact the developer directly at: "
+    outreach: "You can contact the developer using the form below."
     code: "Check out the application code on "
     wish: "I hope you are enjoying the application. Please feel free to reach out to me if you have any reocmmendations."
     message: "Your message"
     email: "Your email"
 
   menu:
-    title: "Aroma"
+    title: "Aromat"
     dashboard: "Dashboard"
     recipes: "Recipes"
     new_recipe: "Add Recipe"
@@ -136,7 +136,7 @@ en:
     messages:
       success: "Operation succeeded!"
     buttons:
-      sign_up: "Try Aroma Today"
+      sign_up: "Try Aromat Today"
       log_in: "Log In"
       forgot_pass: "Forgotten Password?"
       save: "Save"
@@ -177,3 +177,11 @@ en:
         email: "Email"
         password: "Password"
         password_confirmation: "Password Confirmation"
+
+  views:
+    pagination:
+      first: "&laquo; First"
+      last: "Last &raquo;"
+      previous: "&lsaquo; Prev"
+      next: "Next &rsaquo;"
+      truncate: "&hellip;"

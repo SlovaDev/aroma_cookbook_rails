@@ -3485,3 +3485,28 @@ body > .navbar-collapse[data-color="purple"]:after {
 .today {
   background-color: lavender;
 }
+.pagination {
+  margin: 0 0;
+}
+.pagination > li a {
+  color: $purple;
+  background-color: white;
+  border-color: $purple;
+  display: inline-block;
+}
+.pagination > li a:hover {
+  color: white;
+  background-color: $purple;
+  border-color: $purple;
+}
+
+.pagination > .active > a {
+  color: white;
+  background-color: $purple;
+  border-color: $purple;
+}
+.pagination > .active > a:hover {
+  color: white;
+  background-color: $purple;
+  border-color: $purple;
+}
