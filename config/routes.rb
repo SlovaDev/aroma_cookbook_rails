@@ -11,4 +11,5 @@ Rails.application.routes.draw do
 
   resources :cuisines, only: [:index, :show]
   resources :recipes, except: [:index]
+  resources :calendar, only: [:show]
 end
