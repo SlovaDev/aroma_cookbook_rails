@@ -144,7 +144,16 @@ en:
       back: "Back"
       add_ingredient: "Add Ingredient"
       add_direction: "Add Direction"
-
+  
+  calendar:
+    monday: Monday
+    tuesday: Tuesday
+    wednesday: Wednesday
+    thursday: Thursday
+    friday: Friday
+    saturday: Saturday
+    sunday: Sunday
+    
   activerecord:
     model:
       user:
