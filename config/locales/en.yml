@@ -58,11 +58,9 @@ en:
     dashboard: "Dashboard"
     recipes: "Recipes"
     new_recipe: "Add Recipe"
-    planner: "Recipe Planner"
     list: "Grocery List"
     cookbook: "My Cookbook"
-    planner: "Planner"
-    list: "Grocery List"
+    calendar: "Planner"
     account: "Settings"
     help: "Help"
     log_in: "Log In"
@@ -144,7 +142,7 @@ en:
       back: "Back"
       add_ingredient: "Add Ingredient"
       add_direction: "Add Direction"
-  
+
   calendar:
     monday: Monday
     tuesday: Tuesday
@@ -153,7 +151,7 @@ en:
     friday: Friday
     saturday: Saturday
     sunday: Sunday
-    
+
   activerecord:
     model:
       user:

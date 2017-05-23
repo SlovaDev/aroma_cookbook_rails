@@ -3510,3 +3510,12 @@ body > .navbar-collapse[data-color="purple"]:after {
   background-color: $purple;
   border-color: $purple;
 }
+.right {
+  position: relative;
+  right: -2em;
+}
+
+.left {
+  position: relative;
+  left: -2em;
+}

@@ -41,6 +41,8 @@ module ApplicationHelper
         return t('menu.cookbook')
       when 'help'
         return t('menu.help')
+      when 'calendar'
+        return t('menu.calendar')
       else
         return t('menu.dashboard')
       end

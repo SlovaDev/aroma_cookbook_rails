@@ -55,13 +55,12 @@ ru:
 
   menu:
     title: "Аромат"
-    new_recipe: "Добавить рецепт"
-    planner: "Планировщик"
-    list: "Список Продуктов"
-    recipes: "Рецепты"
     dashboard: "Панель Приборов"
+    recipes: "Рецепты"
+    new_recipe: "Добавить рецепт"
+    list: "Список Продуктов"
     cookbook: "Кулинарная Книга"
-    social: "Семья"
+    calendar: "Планировщик"
     account: "Настройки"
     help: "Помочь"
     log_in: "Входить"
@@ -143,7 +142,7 @@ ru:
       back: "Назад"
       add_ingredient: "Добавить Ингредиент"
       add_direction: "Добавить Директива"
-  
+
   calendar:
     monday: Понедельник
     tuesday: Вторник
