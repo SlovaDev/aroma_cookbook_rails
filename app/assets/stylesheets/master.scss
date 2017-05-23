@@ -3482,9 +3482,7 @@ body > .navbar-collapse[data-color="purple"]:after {
   width: 143px;
   opacity: 0.8;
 }
-.today {
-  background-color: lavender;
-}
+
 .pagination {
   margin: 0 0;
 }
@@ -3518,4 +3516,22 @@ body > .navbar-collapse[data-color="purple"]:after {
 .left {
   position: relative;
   left: -2em;
+}
+.calendar {
+  width: 100%;
+  table-layout: fixed;
+  border-collapse: collapse;
+  border-spacing: 0;
+  font-size: 1em;
+}
+.date {
+  font-size: small;
+
+}
+.today {
+  background-color: lavender;
+}
+
+.week-row > td {
+  line-height: 25em !important;
 }

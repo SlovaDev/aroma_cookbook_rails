@@ -1,5 +1,5 @@
 class Calendar < Struct.new("Calendar", :view, :date, :callback)
-	HEADER = ['sunday', 'monday', 'tuesday', 'wednesday', 'thursday', 'friday','saturday']
+	HEADER = ['sunday', 'monday', 'tuesday', 'wednesday', 'thursday', 'friday', 'saturday']
 
 	START_DAY = :sunday 
 
@@ -12,19 +12,19 @@ class Calendar < Struct.new("Calendar", :view, :date, :callback)
 	end
 
 	def header
-		content_tag :tr do 
-			HEADER.map { |day| content_tag :th, day}.join.html_safe
+		content_tag :tr do
+			HEADER.map { |day| content_tag :th, (I18n.t("calendar.#{day}"))}.join.html_safe
 		end
 	end
 
 	def week_row
-		content_tag :tr do 
+		content_tag :tr, class: "week-row" do 
 			week.map { |day| day_cell(day) }.join.html_safe 
 		end
 	end
 
 	def day_cell(day)
-		content_tag :td, view.capture(day, &callback), class: day_classes(day)
+		content_tag :td, view.capture(day, &callback), class: ["date", day_classes(day)]
 	end
 
 	def day_classes(day)

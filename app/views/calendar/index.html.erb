@@ -4,7 +4,7 @@
       <%= link_to calendar_index_path(date: @date - 1.week), class: "btn btn-default left" do %>
         <i class="fa fa-arrow-circle-left fa-md"></i>
       <% end %>
-      <%= "#{@date.strftime("%B")} #{@date.year}" %>
+      <%= t("calendar.#{@date.strftime('%B').downcase}") + " #{@date.year}" %>
       <%= link_to calendar_index_path(date: @date + 1.week), class: "btn btn-default right" do %>
         <i class="fa fa-arrow-circle-right fa-md"></i>
       <% end %>
@@ -13,8 +13,10 @@
 </div>
 <div class="row">
   <div class="col-md-12">
-    <%= calendar @date do |date| %>
-      <%= date.day %>
-    <% end %>
+    <div class="calendar-container">
+      <%= calendar @date do |date| %>
+        <%= date.day %>
+      <% end %>
+    </div>
   </div>
 </div>
