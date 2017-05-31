@@ -1,0 +1,9 @@
+<%= form_for(Entry.new(:recipe_id => recipe_id), :url => add_entry_path ) do |f| %>
+
+  <%= f.select :entry_date, days_of_week, {}, onchange:
+    "(function() {
+      $('#new_entry').submit();
+    })();",
+  class: "form-button btn btn-warning" %>
+<% end %>
+

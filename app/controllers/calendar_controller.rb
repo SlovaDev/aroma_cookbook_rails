@@ -3,6 +3,7 @@ class CalendarController < ApplicationController
 
   def index
   	@date = params[:date] ? Date.parse(params[:date]) : Date.today
-  	@recipes_by_date = Recipe.all
+  	@entries_by_date = Entry.all
   end
+
 end

@@ -12,4 +12,7 @@ Rails.application.routes.draw do
   resources :cuisines, only: [:index, :show]
   resources :recipes, except: [:index]
   resources :calendar, only: [:index]
+
+  post '/add-entry' => 'entries#add_to_cal', as: :add_entry
+  delete '/remove-entry' => 'entries#remove_from_cal', as: :remove_entry
 end

@@ -1,8 +1,8 @@
 ru:
-  date:
+  time:
     formats:
       default: "%d/%m/%Y"
-      short: "%b %d"
+      shorter: "%d %b"
       long: "%-d %B %Y"
 
   welcome:

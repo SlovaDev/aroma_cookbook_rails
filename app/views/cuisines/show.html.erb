@@ -25,14 +25,16 @@
                       <%= link_to recipe.name, recipe_path(recipe) %>
                     </td>
                     <td class="td-actions">
-                      <% localized_time = I18n.l recipe.created_at, format: :long %>
-                      <% puts (localized_time).class %>
+                      <% localized_time = I18n.l recipe.created_at, format: :shorter %>
                       <%= link_to localized_time, recipe_path(recipe) %>
                     </td>
                     <td class="td-actions text-right">
                       <%= link_to edit_recipe_path(recipe), class: "btn btn-success btn-simple btn-lg" do %>
                         <i class="fa fa-edit "></i>
                       <% end %>
+
+                      <%= render partial: 'entry_form', locals: { recipe_id: recipe.id } %>
+                      
                       <%= link_to recipe_path(recipe), method: :delete, data: { confirm: t('recipes.delete.check') }, remote: true, class: "btn btn-danger btn-simple btn-lg" do %>
                         <i class="fa fa-times"></i>
                       <% end %>
