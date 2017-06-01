@@ -1,5 +1,4 @@
 <% provide(:title, t('activerecord.model.cuisine.cuisine')[((params[:id]).to_i - 1)]) %>
-
 <div class="content">
   <div class="container-fluid">
     <div class="row">
@@ -33,8 +32,10 @@
                         <i class="fa fa-edit "></i>
                       <% end %>
 
-                      <%= render partial: 'entry_form', locals: { recipe_id: recipe.id } %>
-                      
+                      <%= link_to [recipe, Entry.new], class: "btn btn-warning btn-simple btn-lg", method: :post do %>
+                        <i class="fa fa-calendar"></i>
+                      <% end %>
+
                       <%= link_to recipe_path(recipe), method: :delete, data: { confirm: t('recipes.delete.check') }, remote: true, class: "btn btn-danger btn-simple btn-lg" do %>
                         <i class="fa fa-times"></i>
                       <% end %>

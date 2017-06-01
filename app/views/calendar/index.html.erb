@@ -18,7 +18,7 @@
         <%= date.day %>
           <ul>
             <% @entries_by_date.each do |entry| %>
-              <li><%= link_to entry, entry %></li>
+              <li><%= link_to recipe_path(entry.recipe_id) %></li>
             <% end %>
           </ul>
       <% end %>

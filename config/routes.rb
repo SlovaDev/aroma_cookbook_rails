@@ -10,9 +10,11 @@ Rails.application.routes.draw do
   devise_for :users
 
   resources :cuisines, only: [:index, :show]
-  resources :recipes, except: [:index]
+
+  resources :recipes, except: [:index] do
+    resources :entries, only: [:new, :create, :destroy]
+  end
+
   resources :calendar, only: [:index]
 
-  post '/add-entry' => 'entries#add_to_cal', as: :add_entry
-  delete '/remove-entry' => 'entries#remove_from_cal', as: :remove_entry
 end

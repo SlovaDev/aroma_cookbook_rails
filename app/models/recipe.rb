@@ -5,8 +5,8 @@ class Recipe < ApplicationRecord
   has_many :directions, dependent: :destroy, inverse_of: :recipe
   has_many :entries
 
-  validates :name, 
-            presence: true, 
+  validates :name,
+            presence: true,
             length: { maximum: 50 }
 
   accepts_nested_attributes_for :ingredients,
